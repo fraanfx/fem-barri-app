@@ -92,9 +92,9 @@ const LocalPage = ({ params }) => {
                 <h2 className="mb-10">Información</h2>
                 <p>{local.description}</p>
         {/* Social links*/}
-        {
+        {/* {
             local.social && <Social links={local.social}/>
-        }
+        } */}
          {/* Locales parecidos filter type */}
         </div>
     )
