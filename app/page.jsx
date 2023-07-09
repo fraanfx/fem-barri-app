@@ -2,7 +2,7 @@ import OffersFeed from "@/components/OffersFeed";
 import LocalsFeed from "@/components/LocalsFeed";
 import Header from "@/components/Header";
 import {data} from "@/data/data"
-import Search from "@/components/Search";
+
 import Newsletter from "@/components/Newsletter";
 import Link from "next/link";
 import ViewMore from "@/components/ViewMore";
