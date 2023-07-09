@@ -1,0 +1,40 @@
+'use client'
+
+import "@/styles/globals.css";
+import { usePathname, useRouter } from "next/navigation";
+
+const LocalCard = ( { id, name, type, desc, web, tags}) => {
+    const pathName = usePathname();
+    const router = useRouter();
+    const navigatePage = () => {
+        console.log('click')
+        router.push(`/local/${id}`)
+    }
+
+    return (
+    <div key={id}  >
+        <div className={`local-card ${type}`}onClick={navigatePage}>
+            <div className="card-title">
+                <h3>{type} {name}</h3>
+            </div>
+            <div className="bg-image"></div>
+            <div className={`card-body-${type}`}>
+                
+                <p>{desc}</p>
+                <div className="tags">
+                    {tags.map((tag, index) => (
+                        <div key={index} style={{"display":"inline-block"}} className="tag">
+                            <h6>&#10003;    {tag}</h6>
+                        </div>
+                    ))}
+                </div>
+
+                
+            </div>
+
+        </div>
+    </div>
+  )
+}
+
+export default LocalCard

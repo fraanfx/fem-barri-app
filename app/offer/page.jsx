@@ -1,0 +1,45 @@
+"use client"
+import { useEffect, useState } from "react";
+import OffersFeed from "@/components/OffersFeed";
+import {data} from "@/data/data"
+import Link from "next/link";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Breadcrumb from "@/components/Breadcrumb";
+// import the icons you need
+import {
+    faMagnifyingGlass
+  } from "@fortawesome/free-solid-svg-icons";
+
+
+
+
+
+const LocalsPage = () => {
+    const  allOffers  = data.offers;
+    const [searchTerm, setSearchTerm] = useState("")
+    const [offersData, setOffersData] = useState(allOffers)
+    const handleChange = (e) => {
+        setSearchTerm(e.target.value)
+    }
+    
+    useEffect(() => {
+        const filteredData = allOffers?.filter((offer) => offer.name.toLowerCase().includes(searchTerm.toLowerCase()) || offer.local.toLowerCase().includes(searchTerm.toLowerCase()) );
+        setOffersData(filteredData)
+    }, [allOffers, searchTerm]) 
+
+  return (
+    <div className="search-page-container">
+         {/* //Breadcrumb */}
+            <Breadcrumb linkUrl={"/"} descTitle="Volver al inicio" />
+        <div className="search-container">
+            <div className="search">
+                <FontAwesomeIcon icon={faMagnifyingGlass} size='2x' className="icon-search"/>
+                <input className="text-input" type="text" onChange={handleChange}></input>
+            </div>
+        </div>
+        <OffersFeed title={"Locales"} data={offersData} />
+    </div>
+  )
+}
+
+export default LocalsPage;
