@@ -1,5 +1,5 @@
 
-  @import url('https://fonts.googleapis.com/css2?family=Meow+Script&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Meow+Script&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap'); */
 
 :root{
   --main-bg-color:  #1D2341;
@@ -217,7 +217,7 @@ a, a:link, a:visited, a:hover, a:active{
     min-width: 400px;
     min-height: 200px;
     transform: rotate(-23.61deg);
-    background: url(https://s3-alpha-sig.figma.com/img/c5cd/121f/cd7333ba1656c2431477332b55cc8389?Expires=1689552000&Signature=MYcc01wGJuSFQgXQfrJRSSP90CtYvhoPLrMVBugnAuafmIB~EEoKqcFBUeJUpYF0hFvZtSzrAZK944g3KR2kOTwLxmAQ5jQ5kUSC~U71ekQVkKF9aOv6MmJWw0WzEUP2PjbGGFMiZIaxC4UVYumIDJzwG9ponO-VDbgNr2VDsVPySvL7Ixo6C4RkKB~67QVMlFOGr53kaQ8-GKAg1FxH1oBzMoYUNz87cLym6eodq1MRm9LE-YgHE~eTurHfkSgmCmrfGUGMT1Yz2AavU64bHZXwW9Hv7EUs4ijkXNT4pdhIvWITmzG5VKRt~HqGh-MQDQKt0TKz5vq6nXOjkqQuJA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4);
+    background: url(/public/images/beer-ilustration.png);
     background-size: 280px;
     background-repeat: no-repeat;
 }
