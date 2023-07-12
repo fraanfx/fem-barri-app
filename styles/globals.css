@@ -41,8 +41,8 @@ html{
     background-color: var(--main-bg-color);
     color: var(--white-text);
     
-    font-family: 'Meow Script', cursive;
-    font-family: 'Montserrat', sans-serif;
+    /* font-family: 'Meow Script', cursive;
+    font-family: 'Montserrat', sans-serif; */
 }
 main{
   background-color: var(--main-bg-color);
@@ -76,13 +76,13 @@ a, a:link, a:visited, a:hover, a:active{
 
   }
   .subtitle{
-    font-family: 'Meow Script', cursive;
+    /* font-family: 'Meow Script', cursive; */
     color: var(--glow-yellow);
     text-decoration: none;
     font-size: 48px;
   }
   .feed-title{
-    font-family: 'Montserrat', sans-serif;
+    /* font-family: 'Montserrat', sans-serif; */
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
@@ -196,7 +196,7 @@ a, a:link, a:visited, a:hover, a:active{
 .tag>h6{
   padding: 0;
   margin: 0;
-  font-family: 'Montserrat',sans-serif;
+  /* font-family: 'Montserrat',sans-serif; */
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -366,7 +366,7 @@ a, a:link, a:visited, a:hover, a:active{
   }
   .primary-button-visual.item-button{
     padding: 12px 16px;
-    font-family: 'Montserrat', sans-serif;
+    /* font-family: 'Montserrat', sans-serif; */
     font-style: normal;
     font-weight: 600;
     font-size: 12px;
