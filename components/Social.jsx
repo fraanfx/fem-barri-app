@@ -1,4 +1,4 @@
-import IconSocial from "./IconSocial";
+import IconSocial from "@/components/IconSocial";
 const Social = ({links}) => {
     
    
