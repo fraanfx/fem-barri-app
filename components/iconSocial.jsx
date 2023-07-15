@@ -36,7 +36,7 @@ const IconSocial = ({type, link}) => {
   return (
     <div className="icon-container">
             <a target="_blank" href={link} rel="noopener noreferrer">
-            <FontAwesomeIcon icon={iconType} style={{marginRight : "6px", fontSize : "20px"}} />
+            {/* <FontAwesomeIcon icon={iconType} style={{marginRight : "6px", fontSize : "20px"}} /> */}
    
          <p>{type} {link}</p>
         </a>
