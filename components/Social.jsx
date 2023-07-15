@@ -1,19 +1,21 @@
-// import IconSocial from "@/components/IconSocial";
+
 const Social = ({links}) => {
     
    
     console.log("[socialInner]",links)
   return (
    <div className="social-container">
-        <p>Social</p>
-                   {/* {
+        
+
+              {
                     Object.entries(links).map(([key, value], idx) =>
                      (
-                      <IconSocial key={idx} type={key} link={value}/>
+                    <p>IconSocial key={idx} type={key} link={value}</p>  
                     
                      )
                     )
-                   }   */}
+                     }
+                  
                   
                   
                    
