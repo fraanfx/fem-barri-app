@@ -5,7 +5,7 @@ const Social = ({links}) => {
     console.log("[socialInner]",links)
   return (
    <div className="social-container">
-        
+        <p>Social</p>
                    {/* {
                     Object.entries(links).map(([key, value], idx) =>
                      (
