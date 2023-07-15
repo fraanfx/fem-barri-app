@@ -19,8 +19,8 @@ const OfferCard = ({
             <div className="offer-row">
                 <img className='offer-image' width={80} height={80} src={image} alt={name} />
                 <div className="offer-text">
-                    <h3>{name}</h3>
-                    <p>{description}</p>
+                    <h3 className='offer--title'>{name}</h3>
+                    <p className=''>{description}</p>
 
                 </div>
                 <div className="price-box">

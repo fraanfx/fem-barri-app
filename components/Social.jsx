@@ -1,13 +1,25 @@
-import IconSocial from "./iconSocial";
-const Social = (links) => {
+import IconSocial from "./IconSocial";
+const Social = ({links}) => {
     
    
-    console.log("[socialInner]",links.links)
+    console.log("[socialInner]",links)
   return (
    <div className="social-container">
-                    {links.links.map((link, index) => (
-                       <IconSocial key={index} type={link[0]} link={link[1]}/>
-                   ))}             
+                    {/* {links.forEach((link, index) => (
+                       <IconSocial key={index} type={link.Object.keys()} link={link}/>
+                   ))}     */}
+                   {
+                    Object.entries(links).map(([key, value], idx) =>
+                     (
+                      <IconSocial key={idx} type={key} link={value}/>
+                    
+                     )
+                    )
+                   }  
+                  
+                  
+                   
+
     </div>
   )
 }

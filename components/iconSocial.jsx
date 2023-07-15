@@ -1,40 +1,45 @@
 "use client"
+import { useState } from "react";
 import {Link} from "next/link";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';import {
-    faTikTok,
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+import {
+  
     faInstagram,
     faFacebookF,
     faYouTube,
     faPinterest,
     faLinkedIn,
     faTwitter
-  } from "@fortawesome/free-solid-svg-icons";
+  } from "@fortawesome/react-fontawesome";
 
 const IconSocial = ({type, link}) => {
+  const [iconType, setIcon] = useState(faInstagram)
     // const how = (type) => {
     //     if(type == "facebookUrl"){
-    //         return "faFacebookF"
+    //         setIcon(faFacebookF)
     //     } else if(type == "instagramUrl"){
-    //          return faInstagram
+    //       setIcon(faInstagram)
     //      }else if (type == "twitterUrl"){
-    //          return faTwitter;
+    //          setIcon(faTwitter);
     //      } else if (type == "youtubeUrl"){
-    //         return faYouTube;
+    //       setIcon(faYouTube);
     //     } else if (type == "pinterestUrl"){
-    //         return faPinterest;
+    //         setIcon(faPinterest)
     //     }else if (type == "linkedinUrl"){
-    //         return faLinkedIn;
+    //         setIcon(faLinkedIn);
     //     }else if (type == "tiktokUrl"){
-    //         return faTikTok;
+    //         setIcon(faTikTok);
     //     } 
     // }
     // how()
   return (
     <div className="icon-container">
-        <FontAwesomeIcon icon={faYouTube} style={{marginRight : "6px", fontSize : "20px"}} />
-        {/* <a target="_blank" href={link} rel="noopener noreferrer">
+            <a target="_blank" href={link} rel="noopener noreferrer">
+            <FontAwesomeIcon icon={iconType} style={{marginRight : "6px", fontSize : "20px"}} />
+   
          <p>{type} {link}</p>
-        </a> */}
+        </a>
     </div>
   )
 }

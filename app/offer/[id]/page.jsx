@@ -6,6 +6,8 @@ import { useParams } from "next/navigation";
 import Link from "next/link";
 import OfferCard from '@/components/OfferCard';
 import OffersFeed from "@/components/OffersFeed";
+import PrintSpecs from "@/components/PrintSpecs";
+
 
 import {data} from "@/data/data"
 import InfoOffer from "@/components/InfoOffer";
@@ -67,7 +69,13 @@ const OfferPage = ({ params }) => {
             </div>
             <div className="" style={{display: "flex", flexFlow: "column nowrap"}}>
                 <h3 className="mb-10">Descripción de la oferta</h3>
-                <p>{paramsOffer.description}</p>  
+                <p>{paramsOffer.description}</p>
+
+                {
+                    paramsOffer.specs && 
+                    
+                   <PrintSpecs title="Especificaciones" specs={paramsOffer.specs}/>
+                }  
             </div>
 
             <h3 style={{marginTop : "20px"}}>Cúpon para mostrar en tienda</h3>

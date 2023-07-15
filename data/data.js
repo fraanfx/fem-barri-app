@@ -6,6 +6,10 @@ export const data ={
             "type": "Cerveseria",
             "address": "C/Rua dos Capixabas, 123",
             "imageLocation" : "https://s3-alpha-sig.figma.com/img/1482/e567/63d4641afa7d29a4efcd818493333eb4?Expires=1688342400&Signature=IyKSygzsq1mgpY6ePsI9LgXi~2TZKGLxeQ3C-48TOrTWqra9BrwRBDKoy12DjqjV1rXzGrAA4m5E8fZewVHPfI-yyDepRNVBznIx4frcr4cVa6COiTwV8gmN2lbdpWDrBG6QRZGiDGY7eG2uh0hkMmRTBG8xFFnmQoaPYiyDmTW9~ePVDZ5IkZvmmEDusZdhw5tgdNWH9xX1VcAwWuuNoRRCnClj~CRlsDV8xlmEXkR2zCP8-P~7DPjqIxRxjWYgm1omdX~lEdJOAwqSh33IRDhpPlKS1xFk2kQjrdFIOY81y3JE8A3~sVUj8oaNqWOfCan71bl0aYNZSuj~wPSfUg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+            "geoPosition" : 
+                            {"lat": 41.437174,
+                            "lng": 2.189875
+                            },
             "urlLocation" : "https://goo.gl/maps/gz3GzfbpyH8kTgq8A",
             "description": "¡Bienvenido a nuestra cervecería, el paraíso de las cervezas artesanales e importadas! Sumérgete en un mundo de sabores y aromas únicos mientras exploras nuestra extensa selección de cervezas cuidadosamente elaboradas. Desde cervezas artesanales locales hasta importaciones de todo el mundo, nuestra variedad te sorprenderá. Nuestro amable personal te guiará en el descubrimiento de nuevas y emocionantes cervezas, ofreciendo recomendaciones y sugerencias para satisfacer tu paladar. Además, acompaña tu cerveza favorita con nuestras deliciosas opciones de comida para una experiencia culinaria completa. ¡Ven y disfruta de un ambiente acogedor, una amplia selección de cervezas y una atención excepcional en nuestra cervecería!",
             "shortResume": "Explora cervezas artesanales y de importación.",
@@ -32,6 +36,10 @@ export const data ={
             "type": "Restaurante",
             "address": "Rua dos Capixabas, 123",
             "imageLocation" : "https://s3-alpha-sig.figma.com/img/1482/e567/63d4641afa7d29a4efcd818493333eb4?Expires=1688342400&Signature=IyKSygzsq1mgpY6ePsI9LgXi~2TZKGLxeQ3C-48TOrTWqra9BrwRBDKoy12DjqjV1rXzGrAA4m5E8fZewVHPfI-yyDepRNVBznIx4frcr4cVa6COiTwV8gmN2lbdpWDrBG6QRZGiDGY7eG2uh0hkMmRTBG8xFFnmQoaPYiyDmTW9~ePVDZ5IkZvmmEDusZdhw5tgdNWH9xX1VcAwWuuNoRRCnClj~CRlsDV8xlmEXkR2zCP8-P~7DPjqIxRxjWYgm1omdX~lEdJOAwqSh33IRDhpPlKS1xFk2kQjrdFIOY81y3JE8A3~sVUj8oaNqWOfCan71bl0aYNZSuj~wPSfUg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+            "geoPosition" : 
+                            {"lat": 41.437174,
+                            "lng": 2.189875
+                            },
             "urlLocation" : "https://goo.gl/maps/gz3GzfbpyH8kTgq8A",
             "description": "¡Bienvenido a nuestro restaurante italiano en el corazón del pintoresco barrio antiguo! Disfruta de nuestras deliciosas pizzas de gama media, preparadas con ingredientes frescos y auténticos sabores italianos. Sumérgete en un ambiente acogedor y encantador mientras saboreas nuestras exquisitas creaciones. Descubre el auténtico sabor de Italia en cada bocado y déjate cautivar por la pasión culinaria de nuestro equipo. Te esperamos para una experiencia gastronómica inolvidable en nuestro restaurante italiano.",
             "shortResume": "Descubre auténticas pizzas italianas en nuestro acogedor restaurante.",
@@ -57,21 +65,25 @@ export const data ={
             "type": "Farmacia",
             "address": "Rua dos Capixabas, 123",
             "imageLocation" : "https://s3-alpha-sig.figma.com/img/1482/e567/63d4641afa7d29a4efcd818493333eb4?Expires=1688342400&Signature=IyKSygzsq1mgpY6ePsI9LgXi~2TZKGLxeQ3C-48TOrTWqra9BrwRBDKoy12DjqjV1rXzGrAA4m5E8fZewVHPfI-yyDepRNVBznIx4frcr4cVa6COiTwV8gmN2lbdpWDrBG6QRZGiDGY7eG2uh0hkMmRTBG8xFFnmQoaPYiyDmTW9~ePVDZ5IkZvmmEDusZdhw5tgdNWH9xX1VcAwWuuNoRRCnClj~CRlsDV8xlmEXkR2zCP8-P~7DPjqIxRxjWYgm1omdX~lEdJOAwqSh33IRDhpPlKS1xFk2kQjrdFIOY81y3JE8A3~sVUj8oaNqWOfCan71bl0aYNZSuj~wPSfUg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+            "geoPosition" : 
+            {"lat": 41.437174,
+            "lng": 2.189875
+            },
             "urlLocation" : "https://goo.gl/maps/gz3GzfbpyH8kTgq8A",
             "description": "Bienvenido a nuestra farmacia, tu destino confiable para todas tus necesidades de salud y bienestar. Nuestro equipo de profesionales altamente capacitados está aquí para brindarte el mejor asesoramiento y recomendaciones personalizadas. Ofrecemos una amplia gama de medicamentos, productos de cuidado personal y servicios farmacéuticos, todo en un ambiente cálido y acogedor. Ya sea que necesites recoger una receta, buscar consejos de salud o encontrar productos de calidad, estamos aquí para ayudarte. Tu bienestar es nuestra prioridad, y estamos comprometidos a brindarte el mejor servicio en nuestra farmacia.",
             "shortResume": "Tu destino confiable para salud y bienestar.",
             "web": "",
             "tags": ["Protección solar barata", "Pastillas multicolor", "Servicio 24h", "Más de 5 variedades de pastillas"],
             "workTime": ["De lunes a viernes 10:00 a 23:00", "Fin de semana y festivos 10:00 a 23:00"],
-            "social": [
-                ["facebookUrl", "https://twitter.com/home"],
-                ["instagramUrl", "https://twitter.com/home"],
-                ["twitterUrl", "https://twitter.com/home"],
-                ["youtubeUrl", "https://twitter.com/home"],
-                ["pinterestUrl", "https://twitter.com/home"],
-                ["linkedinUrl", "https://twitter.com/home"],
-                ["tiktokUrl", "https://twitter.com/home"],
-            ]
+            "social": {
+                "facebookUrl" : "https://twitter.com/home",
+                "instagramUrl": "https://twitter.com/home",
+                "twitterUrl": "https://twitter.com/home",
+                "youtubeUrl": "https://twitter.com/home",
+                "pinterestUrl": "https://twitter.com/home",
+                "linkedinUrl": "https://twitter.com/home",
+                "tiktokUrl": "https://twitter.com/home",
+            }
 
         }
     ],
@@ -123,7 +135,7 @@ export const data ={
             "imageUrl": "https://ipcdn.freshop.com/resize?url=https://images.freshop.com/00071100000528/ef40bdba93292f913eebaa53765bbb88_large.png&width=512&type=webp&quality=90",
             "description": "500ml",
             "resumeInfo": "Pizza de 23'",
-            "specs": ["Oferta válida a partir de menú de 16€"],
+            "specs": ["Oferta válida a partir de menú de 16€", "dsda"],
             "category": "",
             "conditions": "",
             "local": "Pizzeria Milano",
@@ -164,8 +176,8 @@ export const data ={
             "name" : "Pizza carbonara",
             "imageUrl": "https://ipcdn.freshop.com/resize?url=https://images.freshop.com/00071100000528/ef40bdba93292f913eebaa53765bbb88_large.png&width=512&type=webp&quality=90",
             "description": "¡Ven y prueba nuestra exquisita oferta de pizza Carbonara en nuestro restaurante! Deléitate con una base de masa crujiente cubierta con una suave y cremosa salsa de carbonara, salpicada de trozos de tocino crujiente y cebolla caramelizada. El sabor ahumado del queso parmesano y la yema de huevo te transportarán a la tradicional pasta Carbonara en cada bocado. Una combinación única y deliciosa que no puedes perderte. ¡Disfruta de una experiencia culinaria italiana inigualable con nuestra pizza Carbonara!",
-            "resumeInfo": "Pizza de 23'",
-            "specs": ["Oferta válida a partir de menú de 16€"],
+            "resumeInfo": "Pizza de 23' sabor carbonara",
+            "specs": ['Oferta válida a partir de menú de 16€', 'dsda'],
             "category": "Restaurante",
             "conditions": "Válido solo una vez",
             "local": "Pizzeria Milano",

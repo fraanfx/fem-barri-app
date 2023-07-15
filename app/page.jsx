@@ -1,12 +1,11 @@
 import OffersFeed from "@/components/OffersFeed";
 import LocalsFeed from "@/components/LocalsFeed";
-import Header from "@/components/Header";
+
 import {data} from "@/data/data"
 
 import Newsletter from "@/components/Newsletter";
 import Link from "next/link";
 import ViewMore from "@/components/ViewMore";
-
 const Home = () => (
   <section className=''>
    
@@ -18,6 +17,7 @@ const Home = () => (
     {/* ver mas */}
     <ViewMore linkUrl={`/local/`} descTitle={`Ver más`} />
     <Newsletter />
+    
     
 
   </section>

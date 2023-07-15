@@ -310,11 +310,12 @@ a, a:link, a:visited, a:hover, a:active{
   .offer-text > h3 {
     margin-top: 0;
     margin-bottom: 5px;
-    font-size: 12px;
+    font-size: 20px;
   }
   .offer-text > p {
     margin-top: 5px;
     margin-bottom: 5px;
+    font-size: 14px;
   }
   .card-expire-date{
     font-size: 14px;
@@ -327,11 +328,13 @@ a, a:link, a:visited, a:hover, a:active{
     flex-flow: column;
     text-align: end;
     margin-left: 50px;
+    padding-top: 20px;
   }
   .price.red{
     position: relative;
     font-size: 13px;
     text-align: end;
+    margin-bottom: 10px;
     text-decoration: line-through red 3px;
   }
   .price.red::after{
