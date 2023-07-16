@@ -6,8 +6,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import {
   faLocationPin,
-  faCheck,
-  faShareNodes
 } from "@fortawesome/free-solid-svg-icons";
 
 
