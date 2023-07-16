@@ -442,7 +442,10 @@ a, a:link, a:visited, a:hover, a:active{
     opacity: 0.8;
   }
   
-
+  .offer-specs-container{
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
 
   .newsletter-form{
     margin-top: 300px 0;

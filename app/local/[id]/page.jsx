@@ -58,7 +58,7 @@ const LocalPage = ({ params }) => {
             <h2 className="mb-10">Donde estamos?</h2>
             <p className="local-location mb-10">{local.address}</p>
            <div className="container--where">
-            <Map geoPosition={...local.geoPosition}/>
+            <Map geoPosition={...local?.geoPosition}/>
            {/* <img className='local-image' width="100%" height="auto" src={local.imageLocation} alt={local.shortResume} /> */}
            <div className="container-button-fw">
            <a className="primary-button-visual newsletter" href={local.urlLocation}>Abrir en Google Maps</a>

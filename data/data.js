@@ -177,7 +177,7 @@ export const data ={
             "imageUrl": "https://ipcdn.freshop.com/resize?url=https://images.freshop.com/00071100000528/ef40bdba93292f913eebaa53765bbb88_large.png&width=512&type=webp&quality=90",
             "description": "¡Ven y prueba nuestra exquisita oferta de pizza Carbonara en nuestro restaurante! Deléitate con una base de masa crujiente cubierta con una suave y cremosa salsa de carbonara, salpicada de trozos de tocino crujiente y cebolla caramelizada. El sabor ahumado del queso parmesano y la yema de huevo te transportarán a la tradicional pasta Carbonara en cada bocado. Una combinación única y deliciosa que no puedes perderte. ¡Disfruta de una experiencia culinaria italiana inigualable con nuestra pizza Carbonara!",
             "resumeInfo": "Pizza de 23' sabor carbonara",
-            "specs": ['Oferta válida a partir de menú de 16€', 'dsda'],
+            "specs": ['Oferta válida a partir de menú de 16€', 'No es posible añadir ingredientes'],
             "category": "Restaurante",
             "conditions": "Válido solo una vez",
             "local": "Pizzeria Milano",

@@ -67,16 +67,17 @@ const OfferPage = ({ params }) => {
                     </div>
                 </div>
             </div>
+
             <div className="" style={{display: "flex", flexFlow: "column nowrap"}}>
                 <h3 className="mb-10">Descripción de la oferta</h3>
                 <p>{paramsOffer.description}</p>
-
+            </div>
                 {
                     paramsOffer.specs && 
                     
-                   <PrintSpecs title="Especificaciones" specs={paramsOffer.specs}/>
-                }  
-            </div>
+                   <PrintSpecs title="Condiciones de la oferta" specs={paramsOffer.specs}/>
+                } 
+            
 
             <h3 style={{marginTop : "20px"}}>Cúpon para mostrar en tienda</h3>
             <div className="offer-container">
