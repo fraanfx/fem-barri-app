@@ -15,7 +15,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 // import the icons you need
 import {
-    faAngleLeft, faAngleRight, faClockFive
+    faAngleLeft, faAngleRight
   } from "@fortawesome/free-solid-svg-icons";
 
 
