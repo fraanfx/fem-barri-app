@@ -24,11 +24,8 @@ const LocalPage = ({ params }) => {
     const href = window.location.href;
     const local = data.locals.filter((local) => local.id == queryParams.id)[0];
     const localOffers = data.offers.filter((offer) => offer.local.toLowerCase().includes(local.name.toLowerCase()) )
-    console.log("[local offers]",localOffers[0])
-    console.log(local)
-    // console.log(href)
-    console.log("[social]",local.social)
-    console.log("[geoposition]",local.geoPosition.lat)
+
+
     return(
         <div>
          {/* //Breadcrumb */}
@@ -60,9 +57,8 @@ const LocalPage = ({ params }) => {
          {/* //Donde estamos */}
             <h2 className="mb-10">Donde estamos?</h2>
             <p className="local-location mb-10">{local.address}</p>
-           {/* // <Image  src=""/> */}
            <div className="container--where">
-            <Map geoPosition={...local?.geoPosition}/>
+            <Map geoPosition={...local.geoPosition}/>
            {/* <img className='local-image' width="100%" height="auto" src={local.imageLocation} alt={local.shortResume} /> */}
            <div className="container-button-fw">
            <a className="primary-button-visual newsletter" href={local.urlLocation}>Abrir en Google Maps</a>
