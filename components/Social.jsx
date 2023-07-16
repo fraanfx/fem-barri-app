@@ -10,7 +10,7 @@ const Social = ({links}) => {
               {
                     Object.entries(links).map(([key, value], idx) =>
                      (
-                    <p>IconSocial key={idx} type={key} link={value}</p>  
+                    <p key={idx}>IconSocial  type={key} link={value}</p>  
                     
                      )
                     )
