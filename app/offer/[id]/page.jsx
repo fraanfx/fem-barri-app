@@ -63,7 +63,7 @@ const OfferPage = ({ params }) => {
                         <p className="mb-10">{paramsOffer.resumeInfo}</p>
                     </div>
                     <div className="expire-date">
-                        <FontAwesomeIcon className="" icon={faClockFive} style={{marginRight : "6px", fontSize: "20px"}} />  <p>&#128337; Expira el próximo {paramsOffer.expireDate.day} de {paramsOffer.expireDate.month} de {paramsOffer.expireDate.year}</p> 
+                              <p>&#128337; Expira el próximo {paramsOffer.expireDate.day} de {paramsOffer.expireDate.month} de {paramsOffer.expireDate.year}</p> 
                     </div>
                 </div>
             </div>
