@@ -167,16 +167,16 @@ a, a:link, a:visited, a:hover, a:active{
     color: var(--dark-text);
   }
   .local-card.Restaurante > .bg-image{
-    right: -320px;
-    top: 40px;
-    min-width: 400px;
-    min-height: 200px;
+    right: -291px;
+    top: -51px;
+    min-width: 476px;
+    min-height: 300px;
     transform: rotate(-2.23deg);
-    background: url(https://s3-alpha-sig.figma.com/img/8e85/1053/2e39e98597f3312a6abcf8391881573d?Expires=1689552000&Signature=iOgIpIbcxMvtY43jjnmdILdlWkhxcDUbXwejtTPKX7aDPxWW556ONHJj0J9QZ~jhXdqUoDRrw7~l4vSKC4iUyVxEf3F3pkGyFmAJM0ZW99M~iFQK~NKZ1v~kTfDv2egOseblPZ4jIiwsm17OAlIXa8GpVB9Y2rPmsibrkRjlpo~rcvYdgZwRp4T8xojmV0b0CtHoZuwhc0osMxWmiwe6E7~Kf3bNtvqFFJrbae8RCuKZmn2fJp6BstzfHer3R9eBh-OYCnRnY1FDodWD9RNTqSiYIH-szIjWmVm8P3IpFuYVsxMAvWH5m6w9~vemOuYaUWzyc6PuT2uq4z8NIMA~Vg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4);
-    background-size: 120px;
+    background: url(../public/images/pizza-illustration.png);
     background-repeat: no-repeat;
     display: flex;
     justify-content: flex-end;
+    scale: 0.6;
 }
 .local-card > p{
     margin-bottom: 50px;
@@ -216,7 +216,7 @@ a, a:link, a:visited, a:hover, a:active{
     min-width: 400px;
     min-height: 200px;
     transform: rotate(-23.61deg);
-    background: url(https://s3-alpha-sig.figma.com/img/c5cd/121f/cd7333ba1656c2431477332b55cc8389?Expires=1690156800&Signature=iCB1tS-6F099n6HBq1lAeb8oPuSzCm8Iy1cISOzbRixOn428rdLZb5K5y5XgiHsZ7v3XC5T3bJsgryRLFRf9FNow2hGCzmSGGHF1ozAZ0uzLyq2lG2pIyTX0cFjgmFuhqPYlFXVFCz3goI79sZSH-rffXXwJ3sUGP5lZ43hA9JnJTFUFwlm2wj58OG7PY59f~dfZAAlSgzeHtRmcIxEwRB8KAp8Bl1-9yq03T-NnFU1DCa7KKer-Ez3EG4DqbtADVd98MC31BYKL6aQ6Y9COpO7GWxV1rbOI0qyN65mBn6yyFtYALCzk2MXeS-yg9cYB~yL8wazMLOKWTWZ5Vu-mJg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4);
+    background: url('../public/images/medical-image.png');
     background-size: 280px;
     background-repeat: no-repeat;
 }
@@ -234,7 +234,7 @@ a, a:link, a:visited, a:hover, a:active{
     min-width: 278px;
     min-height: 535px;
     transform: rotate(-20.89deg) scale(0.4);
-    background: url(https://s3-alpha-sig.figma.com/img/338e/cee0/d2b7bb45a210a72df346f7e85e6f7849?Expires=1690156800&Signature=Siw3UfpEAfCMwC1ZNsPRygx9QhwZZiq-Mq8Q1xAZ-JlRm2BQjFAVIP4jie-9e1qcpLMyiIhS7DGAhcysAaeDAv8nlnbxQYBikEpT2PEv4iTCAMVmoOvVCFbr1SoDEuzDtv1Yg1tv6grlWzFuuhANHlukZcr2kXSGzBcjViZftCH0OSz~O8mknh~FSuX0q0YkoW9N7KWL~Sqq~AIn1V0WuiPdLiR4OlbgcTbhT9DaEcrOuHkm6A99LgF7ZJ6Z7pzA2hh5HV5Mwx~eaapd59FY2XuuOUQM4QYGiALUeD6tHcLzygrW4Y8rP7EfT1OWn~LLuv1QhPb8ROXcpf-xIm~fYg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4);
+    background: url('../public/images/beer-ilustration.png');
     background-size: 280px;
     background-repeat: no-repeat;
 }
