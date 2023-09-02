@@ -76,13 +76,13 @@ export const data ={
             "tags": ["Protección solar barata", "Pastillas multicolor", "Servicio 24h", "Más de 5 variedades de pastillas"],
             "workTime": ["De lunes a viernes 10:00 a 23:00", "Fin de semana y festivos 10:00 a 23:00"],
             "social": {
-                "facebookUrl" : "https://twitter.com/home",
-                "instagramUrl": "https://twitter.com/home",
+                "facebookUrl" : "https://fa.com/home",
+                "instagramUrl": "https://insta.com/home",
                 "twitterUrl": "https://twitter.com/home",
-                "youtubeUrl": "https://twitter.com/home",
-                "pinterestUrl": "https://twitter.com/home",
-                "linkedinUrl": "https://twitter.com/home",
-                "tiktokUrl": "https://twitter.com/home",
+                "youtubeUrl": "https://youtu.com/home",
+                "pinterestUrl": "https://pinte.com/home",
+                "linkedinUrl": "https://linked.com/home",
+                "tiktokUrl": "https://tiktok.com/home",
             }
 
         }

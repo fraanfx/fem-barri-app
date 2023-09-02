@@ -1,4 +1,4 @@
-
+import IconSocial from "./IconSocial";
 const Social = ({links}) => {
     
    
@@ -10,8 +10,9 @@ const Social = ({links}) => {
               {
                     Object.entries(links).map(([key, value], idx) =>
                      (
-                    <p key={idx}>IconSocial  type={key} link={value}</p>  
-                    
+
+                      <IconSocial type={key} link={value} />
+
                      )
                     )
                      }

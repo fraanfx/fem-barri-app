@@ -1,43 +1,53 @@
 "use client"
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {Link} from "next/link";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import {
-  
+  import {
     faInstagram,
     faFacebookF,
-    faYouTube,
+    faYoutube,
     faPinterest,
-    faLinkedIn,
-    faTwitter
-  } from "@fortawesome/react-fontawesome";
+    faLinkedinIn,
+    faTwitter,
+    faTiktok
+  } from "@fortawesome/free-brands-svg-icons";
+
+
+
+
+
 
 const IconSocial = ({type, link}) => {
   const [iconType, setIcon] = useState(faInstagram)
     const how = (type) => {
-        // if(type == "facebookUrl"){
-        //     setIcon(faFacebookF)
-        // } else if(type == "instagramUrl"){
-        //   setIcon(faInstagram)
-        //  }else if (type == "twitterUrl"){
-        //      setIcon(faTwitter);
-        //  } else if (type == "youtubeUrl"){
-        //   setIcon(faYouTube);
-        // } else if (type == "pinterestUrl"){
-        //     setIcon(faPinterest)
-        // }else if (type == "linkedinUrl"){
-        //     setIcon(faLinkedIn);
-        // }else if (type == "tiktokUrl"){
-        //     setIcon(faTikTok);
-        // } 
+        if(type == "facebookUrl"){
+            setIcon(faFacebookF)
+        } else if(type == "instagramUrl"){
+          setIcon(faInstagram)
+         }else if (type == "twitterUrl"){
+             setIcon(faTwitter);
+         } else if (type == "youtubeUrl"){
+          setIcon(faYoutube);
+        } else if (type == "pinterestUrl"){
+            setIcon(faPinterest)
+        }else if (type == "linkedinUrl"){
+            setIcon(faLinkedinIn);
+        }else if (type == "tiktokUrl"){
+            setIcon(faTiktok);
+        } 
         return null
     }
+    useEffect(()=> {
+      how(type)
+    })
     
   return (
     <div className="icon-container">
             <a target="_blank" href={link} rel="noopener noreferrer">
-         <p>{type} {link}</p>
+            {/* <FontAwesomeIcon icon={faYouTube} style={{marginRight : "6px"}} /> */}
+            <FontAwesomeIcon icon={iconType} />
+         
         </a>
     </div>
   )

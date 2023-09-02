@@ -313,7 +313,7 @@ a, a:link, a:visited, a:hover, a:active{
   .offer-text > h3 {
     margin-top: 0;
     margin-bottom: 5px;
-    font-size: 20px;
+    font-size: 16px;
   }
   .offer-text > p {
     margin-top: 5px;
@@ -426,6 +426,26 @@ a, a:link, a:visited, a:hover, a:active{
   .cta-copy.true{
     cursor: not-allowed;
     background-color: green;
+  }
+
+  .social-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-columns: minmax(20px, 20px);
+    width: 100%;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  .social-container > .icon-container{
+    margin: 10px 30px;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .social-container > .icon-container > a > svg{
+    color: #fff;
+    font-size: 1.6rem;
+    
   }
 
   .breadcrumb{

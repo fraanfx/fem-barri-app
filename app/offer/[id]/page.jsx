@@ -24,7 +24,7 @@ const OfferPage = ({ params }) => {
    //const searchParams = useSearchParams();
     const { offerId } = params;
     const queryParams = useParams();
-    const href = window.location.href;
+    //const href = window.location.href;
     const paramsOffer = data.offers.filter((offer) => offer.id == queryParams.id)[0];
     console.log(paramsOffer)
     const paramsOfferLocal = data.locals.filter((local)=> local.name.toLowerCase().includes(paramsOffer.local.toLowerCase()));
