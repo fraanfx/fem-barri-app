@@ -157,6 +157,9 @@ a, a:link, a:visited, a:hover, a:active{
     top: 2px;
     margin-top: 12px;
   }
+  .search-container > .search > .icon-search{
+    font-size: 1.6rem;
+  }
   .text-input{
     border-radius: 8px;
     min-width: calc(100% - 20px);

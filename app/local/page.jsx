@@ -33,7 +33,7 @@ const LocalsPage = () => {
          <Breadcrumb linkUrl={"/"} descTitle="Volver al inicio" />
         <div className="search-container">
             <div className="search">
-                <FontAwesomeIcon icon={faMagnifyingGlass} size='2x' className="icon-search"/>
+                <FontAwesomeIcon icon={faMagnifyingGlass}  className="icon-search"/>
                 <input className="text-input" type="text" onChange={handleChange}></input>
             </div>
         </div>
