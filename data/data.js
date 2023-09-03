@@ -30,11 +30,9 @@ export const data ={
             "social": {
                 "facebookUrl" : "https://fa.com/home",
                 "instagramUrl": "https://insta.com/home",
-                "twitterUrl": "https://twitter.com/home",
                 "youtubeUrl": "https://youtu.com/home",
                 "pinterestUrl": "https://pinte.com/home",
-                "linkedinUrl": "https://linked.com/home",
-                "tiktokUrl": "https://tiktok.com/home",
+                "tiktokUrl": "https://tiktok.com/home"
             }
 
 
