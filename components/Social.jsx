@@ -11,7 +11,7 @@ const Social = ({links}) => {
                     Object.entries(links).map(([key, value], idx) =>
                      (
 
-                      <IconSocial type={key} link={value} />
+                      <IconSocial  key={idx} type={key} link={value} />
 
                      )
                     )
