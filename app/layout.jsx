@@ -27,7 +27,7 @@ export const metadata = {
 
 const RootLayout = ({ children }) => (
   <html lang='es'>
-    <body className={`${montserratFont.className}`}>
+    <body className={montserratFont.className}>
         <main className={`app`}>
             <Header />
           {children}
