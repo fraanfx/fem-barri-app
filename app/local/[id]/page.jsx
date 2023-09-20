@@ -91,7 +91,7 @@ const LocalPage = ({ params }) => {
                 <p>{local.description}</p>
         {/* Social links*/}
         {
-            local.social && <Social links={...local.social}/>
+            local.social && <Social links={local.social}/>
         }
          {/* Locales parecidos filter type */}
         </div>
