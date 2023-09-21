@@ -18,7 +18,8 @@ import { config } from "@fortawesome/fontawesome-svg-core";
 config.autoAddCss = false; 
 
 const montserratFont = Montserrat({
-  subsets:['latin']
+  subsets:['latin'],
+  weight: ['100','200','300','400','500','600','700','800',]
 })
 export const metadata = {
   title: "FemBarri",

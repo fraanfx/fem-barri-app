@@ -31,7 +31,6 @@ const OfferPage = ({ params }) => {
     const [selectedOffer, setSelectedOffer] = useState({});
     console.log("[Local]",paramsOfferLocal)
     console.log("[Local-0]",paramsOfferLocal[0].id)
-    console.log(href)
     return(
         <div> 
             <div className="breadcrumb-container">

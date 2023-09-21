@@ -529,6 +529,7 @@ a, a:link, a:visited, a:hover, a:active{
     cursor: pointer;
     text-decoration: underline;
     margin-bottom: 5px;
+    text-underline-offset: 4px;
   }
   footer > a:link {
     text-decoration: underline;
