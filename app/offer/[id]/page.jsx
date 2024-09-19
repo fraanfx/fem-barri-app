@@ -47,26 +47,28 @@ const OfferPage = ({ params }) => {
             {/* <OffersFeed /> */}
             <h6 className="local--page__type">{paramsOfferLocal[0].type}</h6>
             <h2 className="local--page__local-name">{paramsOfferLocal[0].name}</h2>
-           
-            <div className="offer-container">
-                <div className="offer-content">
-                    <div className="offer-image-container">
-                          <img src={paramsOffer.imageUrl} width={300} height={300} alt="" className="offer-image" />
-                    </div>
-                        <h3 className="offer--title">{paramsOffer.name}</h3>
-                    <div className="offer-description">
-                        {/* {paramsOffer.name} */}
-                        <p className="mb-10">Last price <span className='price red'>{paramsOffer.price}</span></p>
-                        
-                        <p className="mb-10">Offer price <span className='price discount'>{paramsOffer.discountPrice}</span></p>
-                        <p className="mb-10">{paramsOffer.resumeInfo}</p>
-                    </div>
-                    <div className="expire-date">
-                              <p>&#128337; Expira el próximo {paramsOffer.expireDate.day} de {paramsOffer.expireDate.month} de {paramsOffer.expireDate.year}</p> 
+           <div className="local--offer">
+            <div className="offer-container-card">
+                <div className="offer-container">
+                    <div className="offer-content">
+                        <div className="offer-image-container">
+                            <img src={paramsOffer.imageUrl} width={300} height={300} alt="" className="offer-image" />
+                        </div>
+                            <h3 className="offer--title">{paramsOffer.name}</h3>
+                        <div className="offer-description">
+                            {/* {paramsOffer.name} */}
+                            <p className="mb-10">Last price: <span className='price red'>{paramsOffer.price}€</span></p>
+                            
+                            <p className="mb-10">Offer price: <span className='price discount'>{paramsOffer.discountPrice}€</span></p>
+                            <p className="mb-10">{paramsOffer.resumeInfo}</p>
+                        </div>
+                        <div className="expire-date">
+                                <p>&#128337; Expira el próximo {paramsOffer.expireDate.day} de {paramsOffer.expireDate.month} de {paramsOffer.expireDate.year}</p> 
+                        </div>
                     </div>
                 </div>
             </div>
-
+            <div className="offer-specs" >
             <div className="" style={{display: "flex", flexFlow: "column nowrap"}}>
                 <h3 className="mb-10">Descripción de la oferta</h3>
                 <p>{paramsOffer.description}</p>
@@ -76,19 +78,22 @@ const OfferPage = ({ params }) => {
                     
                    <PrintSpecs title="Condiciones de la oferta" specs={paramsOffer.specs}/>
                 } 
-            
-
-            <h3 style={{marginTop : "20px"}}>Cúpon para mostrar en tienda</h3>
-            <div className="offer-container">
-                <h2 style={{'textAlign': 'center'}}>{paramsOffer.cupon}</h2>
+            <div className="specs-extra">
+                <div className="cupon-group">
+                    <h3 style={{marginTop : "20px"}}>Cúpon para mostrar en tienda</h3>
+                    <div className="offer-container">
+                        <h2 className="cupon">{paramsOffer.cupon}</h2>
+                    </div>
+                </div>
+                <div className="container-button-fw">
+                <Link href={`/local/${paramsOfferLocal[0].id}`} className="primary-button-visual newsletter text-center">
+                        Ver   {paramsOfferLocal[0].name}
+                    </Link>
+                </div>
+                    <InfoOffer />
+                </div>
             </div>
-            <div className="container-button-fw">
-            <Link href={`/local/${paramsOfferLocal[0].id}`} className="primary-button-visual newsletter text-center">
-                    Ver   {paramsOfferLocal[0].name}
-                </Link>
             </div>
-                <InfoOffer />
-            
             <OffersFeed  title={"Otras ofertas"} data={data.offers}/>
             <div className="container-button-fw">
                 <Link href={`/offer/`} className="primary-button-visual newsletter text-center">

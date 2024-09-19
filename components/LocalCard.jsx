@@ -12,8 +12,8 @@ const LocalCard = ( { id, name, type, desc, web, tags}) => {
     }
 
     return (
-    <div key={id}  >
-        <div className={`local-card ${type}`}onClick={navigatePage}>
+  
+        <div key={id} className={`local-card ${type}`}onClick={navigatePage}>
             <div className="card-title">
                 <h3>{type} {name}</h3>
             </div>
@@ -33,7 +33,7 @@ const LocalCard = ( { id, name, type, desc, web, tags}) => {
             </div>
 
         </div>
-    </div>
+  
   )
 }
 

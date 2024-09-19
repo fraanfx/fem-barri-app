@@ -55,15 +55,23 @@ const LocalPage = ({ params }) => {
         </div>
         
          {/* //Donde estamos */}
+         <div className="local-location__container">
             <h2 className="mb-10">Donde estamos?</h2>
             <p className="local-location mb-10">{local.address}</p>
            <div className="container--where">
             <Map geoPosition={local.geoPosition}/>
            {/* <img className='local-image' width="100%" height="auto" src={local.imageLocation} alt={local.shortResume} /> */}
-           <div className="container-button-fw">
-           <a className="primary-button-visual newsletter" href={local.urlLocation}>Abrir en Google Maps</a>
+           <div className="container-button-fw location">
+           <a className="primary-button-visual newsletter " href={local.urlLocation}>Abrir en Google Maps</a>
+           </div>
+
            </div>
            </div>
+           <div className="container-info">
+                    {/* //Info */}
+                    <h2 className="mb-10">Información</h2>
+                    <p>{local.description}</p>
+                </div>
          {/* //Horario */}
          <div className="worktime-container mb-10">
             <h2 className="mb-10">Horario</h2>
@@ -82,13 +90,12 @@ const LocalPage = ({ params }) => {
              
              : ''}
         {/* Comparte este local  */}
-        <InfoOffer />
+        <div className="copy-margin">
+            <InfoOffer />
+        </div>
          {/* //offersFeed */}
          { localOffers[0] !== undefined ?  <OffersFeed title={`Ofertas de ${local.name}`} data={localOffers}/> : <p style={{"color": "red", "marginBottom" : "20px"}}>No hay ofertas disponibles para este local</p>}
-         
-             {/* //Info */}
-                <h2 className="mb-10">Información</h2>
-                <p>{local.description}</p>
+                
         {/* Social links*/}
         {
             local.social && <Social links={local.social}/>

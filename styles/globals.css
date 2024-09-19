@@ -9,26 +9,33 @@
   --cta-green-hover: hsl(163, 87%, 35%);
   --dark-text: #666666;
   --low-opacity-card: rgba(255, 255, 255, 0.1);
+  --low-opacity-card-hover: rgba(255, 255, 255, 0.2);
 
   /* Item colors */
   /* Red  */
   --item-red-light: #C97878;
   --item-red-dark: #BD6C6C; 
+  --item-red-light--hover: hsl(0, 42%, 66%);
   /* Purple */
-  --item-purple-light: #7A78C9;
+  --item-purple-light: #7978c9;
   --item-purple-dark: #6E6CBD; 
+  --item-purple-light--hover: hsl(241, 42%, 66%);
   /* Blue */
   --item-blue-light: #789DC9;
   --item-blue-dark: #6C91BD; 
+  --item-blue-light--hover: hsl(213, 42%, 66%);
   /* Orange */
   --item-orange-light: #C99578;
   --item-orange-dark: #BD896C; 
+  --item-orange-light--hover: hsl(21, 42%, 66%);
   /* Fucsia */
   --item-fucsia-light: #BE78C9;
   --item-fucsia-dark: #AD6CBD; 
+  --item-fucsia-light--hover: hsl(293, 42%, 66%);
   /* Green */
   --item-green-light: #78C999;
   --item-green-dark: #6CBD8C; 
+  --item-green-light--hover: hsl(144, 42%, 66%);
 
 
 }
@@ -48,6 +55,8 @@ main{
   background-color: var(--main-bg-color);
   padding: 0 16px;
   min-height: 75vh;
+ /* max-width: 600px;
+ margin: 0 auto; */
 }
 a, a:link, a:visited, a:hover, a:active{
     text-decoration: none;
@@ -111,24 +120,26 @@ a, a:link, a:visited, a:hover, a:active{
     margin-bottom:50px;
     overflow: hidden;
     z-index: 0;
+    cursor: pointer;
   }
-  .local-card.Pizzeria{
-    background-color: var(--item-purple-light);
-  }
+ 
   .card-title{
+    position: relative;
     margin-bottom: 20px;
+    z-index: 4;
   }
   .card-title > h3{
-
+    z-index: 4;
   }
   [class^=card-body-]{
-    z-index: 2;
+    z-index: 4;
     position: relative;
     min-height: 70px;
   }
   [class^=card-body-] > p{
    margin-bottom: 20px;
    max-width: 80%;
+   z-index: 3;
   }
   .bg-image{
     z-index: 2;
@@ -169,18 +180,7 @@ a, a:link, a:visited, a:hover, a:active{
     /* margin-right: -20px; */
     color: var(--dark-text);
   }
-  .local-card.Restaurante > .bg-image{
-    right: -291px;
-    top: -51px;
-    min-width: 476px;
-    min-height: 300px;
-    transform: rotate(-2.23deg);
-    background: url(../public/images/pizza-illustration.png);
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: flex-end;
-    scale: 0.6;
-}
+  
 .local-card > p{
     margin-bottom: 50px;
 }
@@ -193,7 +193,7 @@ a, a:link, a:visited, a:hover, a:active{
   border-radius: 16px;
   margin-bottom:  8px;
   margin-right: 10px;
-  
+  z-index: 4;
 }
 .tag>h6{
   padding: 0;
@@ -205,8 +205,33 @@ a, a:link, a:visited, a:hover, a:active{
   line-height: 12px;
   letter-spacing: -0.24px;
 }
+.local-card.Restaurante > .bg-image{
+    right: -291px;
+    top: -51px;
+    min-width: 476px;
+    min-height: 300px;
+    transform: rotate(-2.23deg);
+    background: url(../public/images/pizza-illustration.png);
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: flex-end;
+    scale: 0.6;
+}
+.local-card.Restaurante{
+    background-color: var(--item-purple-light);
+    transition: ease all 0.3s;
+}
+.feed-container > .local-card.Restaurante:hover{
+    background-color: var(--item-purple-light--hover);
+    transition: ease all 0.3s;
+}
 .local-card.Farmacia{
   background-color: var(--item-blue-light);
+  transition: ease all 0.3s;
+}
+.feed-container > .local-card.Farmacia:hover{
+  background-color: var(--item-blue-light--hover);
+  transition: ease all 0.3s;
 }
 .card-body-Farmacia > .tags > .tag{
   background-color: var(--item-blue-dark);
@@ -225,6 +250,11 @@ a, a:link, a:visited, a:hover, a:active{
 }
 .local-card.Cerveseria{
   background-color: var(--item-red-light);
+  transition: ease all 0.3s;
+}
+.feed-container > .local-card.Cerveseria:hover{
+  background-color: var(--item-red-light--hover);
+  transition: ease all 0.3s;
 }
 .card-body-Cerveseria > .tags > .tag{
   background-color: var(--item-red-dark);
@@ -246,6 +276,10 @@ a, a:link, a:visited, a:hover, a:active{
 }
 /* local page */
 .citated-type{
+
+}
+
+.local-location__container{
 
 }
 
@@ -278,16 +312,31 @@ a, a:link, a:visited, a:hover, a:active{
 
   /*Offer */
   
+  .local--offer{
+    display: flex;
+    flex-flow: column nowrap;
+    margin-left: 0px;
+  }
   .offer-container{
     background: var(--low-opacity-card);
     border-radius: 12px;
     padding: 18px 16px;
     margin: 10px 0;
-    margin-bottom: 50px
+    margin-bottom: 50px;
+    cursor: pointer;
+    transition: ease all 0.3s;
+  }
+ 
+  .feed-container>.offer-container:hover{
+    background: var(--low-opacity-card-hover);
+    transition: ease all 0.3s;
   }
   .offer-content{
     display: flex;
     flex-flow: column nowrap;
+  }
+  .offer-specs{
+    margin-left: 0px;
   }
   .offer-row{
    display: grid;
@@ -335,17 +384,20 @@ a, a:link, a:visited, a:hover, a:active{
   }
   .price.red{
     position: relative;
-    font-size: 13px;
+    font-size: 12px;
     text-align: end;
     margin-bottom: 10px;
-    text-decoration: line-through red 3px;
+    /* text-decoration: line-through red 3px; */
   }
   .price.red::after{
-    /* position: absolute;
+    position: absolute;
     content:'/';
-    left: 7px;
-    font-weight: 800;
-    color: red; */
+    font-size: 20px;
+    right: 4px;
+    top: -5px;
+    font-weight: 400;
+    color: red;
+   
   }
   .success-color{
     color: rgb(7, 229, 7);
@@ -358,6 +410,16 @@ a, a:link, a:visited, a:hover, a:active{
     font-size: 16px;
     margin-top: -5px;
     margin-top: 150px;
+  }
+  .specs-extra{
+    display: flex;
+    flex-flow: column nowrap;
+  }
+  .cupon-group{
+    max-width: 300px;
+  }
+  .cupon-group > .offer-container > h2{
+    text-align: center;
   }
   .primary-button-visual{
     background-color: var(--cta-green);
@@ -379,11 +441,30 @@ a, a:link, a:visited, a:hover, a:active{
   } 
   .container-button-fw{
     text-align: center;
-    display: flex;
+    display: block;
     justify-content: center;
     width: 100%;
-    margin: 16px 0;
+    margin: 16px auto;
+    max-width: 260px;
+
   }
+  .container-button-fw.location{
+    text-align: center;
+    display: block;
+    justify-content: center;
+    width: 100%;
+    margin: 16px auto;
+    max-width: none;
+    margin: 40px 0;
+  }
+  .specs-extra > .cupon-group{
+    justify-content: center;
+    margin: 0 auto;
+  }
+  .specs-extra > .container-button-fw{
+      margin-top: 20px;
+  }
+ 
   .container-button-fw > .primary-button-visual{
     min-width: calc(100% - 32px);
   }
@@ -395,12 +476,16 @@ a, a:link, a:visited, a:hover, a:active{
     border: none;
     margin: 15px 0;
   }
+  .copy-margin{
+    margin: 30px 0;
+  }
   .copy-container{
     text-align: center;
     display: block;
-    margin: 80px 0;
+    margin: 10px 0;
    
   }
+ 
   .copy-text-container{
     display: flex;
     flex-flow: row;
@@ -435,6 +520,8 @@ a, a:link, a:visited, a:hover, a:active{
     width: 100%;
     justify-content: center;
     margin-top: 30px;
+    max-width: 500px;
+    margin: 30px auto;
   }
   .social-container > .icon-container{
     margin: 10px 30px;
@@ -468,6 +555,10 @@ a, a:link, a:visited, a:hover, a:active{
   .offer-specs-container{
     margin-top: 40px;
     margin-bottom: 40px;
+  }
+  .offer-specs-container > li{
+    margin-bottom: 7px;
+
   }
 
   .newsletter-form{
@@ -549,6 +640,36 @@ a, a:link, a:visited, a:hover, a:active{
       grid-template-columns: 1fr 1fr;
       gap: 20px;
     }
+    .social-container{
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+    .local--offer{
+      display: flex;
+      flex-flow: row nowrap;
+     
+    }
+    .specs-extra{
+      display: flex;
+      flex-flow: row wrap;
+      flex: 1;
+    }
+    .specs-extra > .container-button-fw{
+      margin-top: 70px;
+  }
+  .specs-extra > .copy-container{
+    margin-top: -6px;
+  }
+  .copy-text-container,.copy-text-container > h2{
+   font-size: 1.17rem;
+   text-align: left;
+  }
+  .specs-extra > .cupon-group {
+    margin-left: 0px;
+    margin: 0;
+  }
+  .offer-specs{
+    margin-left: 20px;
+  }
   }
   @media only screen and (min-width: 1000px){
     main{

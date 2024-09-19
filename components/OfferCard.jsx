@@ -26,8 +26,8 @@ const OfferCard = ({
                 <div className="price-box">
                     {discount ?
                     <div className='price-container'>
-                        <span className='price red'>{price}€</span>
-                        <span className='price discount'>{discount}€</span>
+                        <span className='price red'>{`${price}€`}</span>
+                        <span className='price discount'>{`${discount}€`}</span>
                     </div>
                     :
                     <span className='price green'>{price}€</span>}
