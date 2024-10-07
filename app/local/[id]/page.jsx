@@ -37,7 +37,7 @@ const LocalPage = ({ params }) => {
             <p className="citated-type">{local.type}</p>
             <h2 >{local.name}</h2>
             <div className="container-h-flex">
-            <div className={`local-card ${local.type}`}>
+            <div className={`local-card ${local.type} mb-50`} >
             <div className="card-title">
             </div>
             <div className="bg-image"></div>

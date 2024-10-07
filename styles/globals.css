@@ -117,7 +117,7 @@ a, a:link, a:visited, a:hover, a:active{
     padding: 18px 16px;
     margin: 10px 0;
     border-radius: 10px;
-    margin-bottom:50px;
+    margin-bottom:35px;
     overflow: hidden;
     z-index: 0;
     cursor: pointer;
@@ -280,6 +280,12 @@ a, a:link, a:visited, a:hover, a:active{
 .mb-50{
   margin-bottom: 50px;
 }
+.mt-10{
+  margin-top: 10px;
+}
+.mt--10{
+  margin-top: -10px;
+}
 .op-0{
   opacity: 0;
 }
@@ -335,7 +341,7 @@ a, a:link, a:visited, a:hover, a:active{
     border-radius: 12px;
     padding: 18px 16px;
     margin: 10px 0;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
     cursor: pointer;
     transition: ease all 0.3s;
   }
@@ -602,7 +608,7 @@ a, a:link, a:visited, a:hover, a:active{
     justify-content: flex-start;
     color: var(--white-text);
     text-transform: uppercase;
-    margin-top: -25px;
+    margin-top: -10px;
     margin-bottom: 50px;
     text-decoration: underline;
     align-items: center;
