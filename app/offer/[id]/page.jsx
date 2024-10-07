@@ -47,7 +47,7 @@ const OfferPage = ({ params }) => {
             {/* <OffersFeed /> */}
             <h6 className="local--page__type">{paramsOfferLocal[0].type}</h6>
             <h2 className="local--page__local-name">{paramsOfferLocal[0].name}</h2>
-           <div className="local--offer">
+           <div className="local--offer mb-60">
             <div className="offer-container-card">
                 <div className="offer-container">
                     <div className="offer-content">

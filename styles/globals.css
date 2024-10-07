@@ -274,6 +274,19 @@ a, a:link, a:visited, a:hover, a:active{
 .mb-10{
   margin-bottom: 10px;
 }
+.mb-30{
+  margin-bottom: 30px;
+}
+.mb-50{
+  margin-bottom: 50px;
+}
+.op-0{
+  opacity: 0;
+}
+.container-h-flex{
+  display: flex;
+  flex-flow: column nowrap;
+}
 /* local page */
 .citated-type{
 
@@ -322,7 +335,7 @@ a, a:link, a:visited, a:hover, a:active{
     border-radius: 12px;
     padding: 18px 16px;
     margin: 10px 0;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     cursor: pointer;
     transition: ease all 0.3s;
   }
@@ -679,6 +692,19 @@ a, a:link, a:visited, a:hover, a:active{
     .feed-container{
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-      gap: 35px;
+      column-gap: 35px;
+    }
+    .container-h-flex{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+    }
+    .container-h-flex > div{
+      
+    }
+    .page-low-info{
+      display: flex;
+      flex-flow: column wrap;
+
     }
   }

@@ -36,7 +36,7 @@ const LocalPage = ({ params }) => {
          {/* //title */}
             <p className="citated-type">{local.type}</p>
             <h2 >{local.name}</h2>
-
+            <div className="container-h-flex">
             <div className={`local-card ${local.type}`}>
             <div className="card-title">
             </div>
@@ -53,9 +53,16 @@ const LocalPage = ({ params }) => {
             </div>
 
         </div>
-        
+
+                 
+          {/* //Info */}
+          <div className="container-info mb-50">
+                    <h2 className="mb-10">Información</h2>
+                    <p>{local.description}</p>
+            </div>
+    
          {/* //Donde estamos */}
-         <div className="local-location__container">
+         <div className="local-location__container mb-30">
             <h2 className="mb-10">Donde estamos?</h2>
             <p className="local-location mb-10">{local.address}</p>
            <div className="container--where">
@@ -67,33 +74,33 @@ const LocalPage = ({ params }) => {
 
            </div>
            </div>
-           <div className="container-info">
-                    {/* //Info */}
-                    <h2 className="mb-10">Información</h2>
-                    <p>{local.description}</p>
-                </div>
+          <div className="page-low-info">
          {/* //Horario */}
-         <div className="worktime-container mb-10">
+         <div className="worktime-container mb-50">
             <h2 className="mb-10">Horario</h2>
             {
                 local.workTime.map((worktime, index) => (
-                    <p key={index}>{worktime}</p>
+                    <p key={index}>{worktime} <br/></p> 
                     ))
                 }
          </div>
         {/* Website? */}
             {local.web ? 
-            <div className="website-container mb-10">
+            <div className="website-container mb-50">
                 <h2 className="mb-10">Sitio web</h2>
                 <Link href={local.web} style={{color: "#fff", cursor: "pointer", display: "flex", alignItems: "center"}}> <FontAwesomeIcon className="breadcrumb-icon" icon={faArrowUpRightFromSquare} style={{marginRight : "6px"}} />  <p style={{margin : "0", fontSize: "20px"}}>{local.web} </p></Link>
             </div>
              
              : ''}
-        {/* Comparte este local  */}
-        <div className="copy-margin">
-            <InfoOffer />
+            {/* Comparte este local  */}
+            <div className="copy-margin mb-50">
+                <InfoOffer />
+            </div>
+            </div>
         </div>
+        
          {/* //offersFeed */}
+         <hr className="mb-50 op-0"/>
          { localOffers[0] !== undefined ?  <OffersFeed title={`Ofertas de ${local.name}`} data={localOffers}/> : <p style={{"color": "red", "marginBottom" : "20px"}}>No hay ofertas disponibles para este local</p>}
                 
         {/* Social links*/}
