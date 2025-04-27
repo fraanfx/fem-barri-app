@@ -1,5 +1,17 @@
 import IconSocial from "./iconSocial";
-const Social = ({links}) => {
+interface SocialProps {
+  links:{
+  facebookUrl?: string;
+  instagramUrl?: string;
+  twitterUrl?: string;
+  youtubeUrl?: string;
+  pinterestUrl?: string;
+  linkedinUrl?: string;
+  tiktokUrl?: string;
+  }
+}
+
+const Social = (links: SocialProps ) => {
     
    
     console.log("[socialInner]",links)

@@ -1,8 +1,7 @@
 'use client'
 
 import { useEffect, useState} from "react";
-import { searchParams, useSearchParams } from 'next/navigation';
-import { useParams } from "next/navigation";
+import { useParams , useSearchParams } from 'next/navigation';
 import Link from "next/link";
 import OfferCard from '@/components/OfferCard';
 import OffersFeed from "@/components/OffersFeed";

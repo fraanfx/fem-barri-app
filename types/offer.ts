@@ -1,0 +1,40 @@
+export type Offer = {
+    id: string,
+    name: string,
+    imageUrl: string,
+    description: string,
+    resumeInfo: string,
+    specs:[string],
+    category: string,
+    conditions: string,
+    local: string,
+    cupon: string,
+    premium: boolean,
+    price: number,
+    discountPrice: number,
+    expireDate: {
+        day: string,
+        month: string,
+        year: string,
+    }
+}
+
+export type Local = {
+    id: string,
+    name: string,
+    type: string,
+    address: string,
+    imageLocation: string,
+    geoposition: {
+        lat: number,
+        lng: number,
+    }
+    urlLocation: string,
+    description: string;
+    shortResume: string
+    web: string;
+    tags: [string];
+    offers?: [object],
+    workTime: [string],
+    social? : object
+}

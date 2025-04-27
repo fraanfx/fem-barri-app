@@ -1,34 +1,38 @@
 'use client'
-import { useState, useRef } from 'react'
+import { useState, useRef, ChangeEvent, FormEvent } from 'react'
 
 const Newsletter = () => {
-    const formRef = useRef()
-    const [email, setEmail] = useState('');
-    const [errorText, setErrorText] = useState('')
-    const [colorText, setColorText] = useState('error')
-    const handleChange = (e) => {
-        const { target } = e;    
-        setEmail(target.value);
+    const formRef = useRef<HTMLFormElement>(null)
+    const [email, setEmail] = useState<string>('');
+    const [errorText, setErrorText] = useState<string>('')
+    const [colorText, setColorText] = useState<string>('error')
+
+
+     const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+        const { value } = e.target;    
+        setEmail(value);
         console.log(email)
         emailRegex(email)
-      };
-    const emailRegex = (email) => {
+    };
+
+    const emailRegex = (email: string): boolean => {
         let mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-       if(email.match(mailFormat) === email) return true 
-        //alert( email)
+        return email.match(mailFormat) !== null;
     }
-    const handleSubmit = (e) => {
+
+    const handleSubmit = (e: FormEvent) => {
         e.preventDefault();
         console.log('send')
       
         const clean = () => { setTimeout(() => setErrorText(""), 9000);}
-        if(email == '' || null || undefined){
+
+        if(email === '' || email === null || email === undefined){
             setColorText('error')
             setErrorText('Campo vacio')
             clean()
            
         }
-        else if (emailRegex(email) == true){
+        else if (emailRegex(email) === true){
             setColorText('success')
             setErrorText('valid')
             clean()
@@ -44,7 +48,7 @@ const Newsletter = () => {
 
 
   return (
-    <div>
+    <div className='newsletter-container'>
          <h4 className='feed-title'>Newsletter</h4>
          <p className='feed-description'>Suscribete a la newsletter para recibir las últimas ofertas</p>
          <form className='newsletter-form' ref={formRef}
@@ -54,7 +58,7 @@ const Newsletter = () => {
               name='email'
               onChange={handleChange}
               className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
-     ></input>
+          />
               <h6 className={`error-text ${colorText}-color`} >{errorText}</h6>
 
          <span  className='primary-button-visual newsletter' onClick={handleSubmit}>Suscríbete</span>

@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Meow_Script } from '@next/font/google'
+import { Meow_Script } from 'next/font/google'
 
 const meowScriptFont = Meow_Script({
   subsets:['latin'],

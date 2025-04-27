@@ -2,9 +2,27 @@
 import React from 'react'
 import Image from 'next/image';
 import { usePathname, useRouter } from "next/navigation";
+
+interface OfferCardProps {
+    id: string,
+    name: string,
+    image: string,
+    description: string;
+    local: string;
+    price: number;
+    discount: number;
+    cupon: string;
+    date: {
+        day: string,
+        month: string,
+        year: string
+    };
+}
+
+
 const OfferCard = ({
    id,  name, image, description, local, price, discount, cupon, date
-}) => {
+}: OfferCardProps) => {
     const pathName = usePathname();
     const router = useRouter();
 

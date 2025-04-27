@@ -1,16 +1,23 @@
 import React from 'react'
 //import {data} from "@/data/data"
 import OfferCard from './OfferCard';
+import {Offer} from '@/types/offer'
+
+interface OffersFeedProps {
+  title: string,
+  data: [
+    Offer
+  ]
+}
 
 
-
-const OffersFeed = ({title, data}) => {
+const OffersFeed = ({ title, data}: OffersFeedProps ) => {
   const offers = data;
   return (
     <div>
       <h4 className='feed-title'>{title}</h4>
       <div className="feed-container">
-      {offers.map((offer) => {
+      {offers.map((offer: Offer) => {
         return (
           <OfferCard 
           key={offer.id}

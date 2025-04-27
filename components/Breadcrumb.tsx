@@ -6,7 +6,13 @@ import {
     faAngleLeft,
     faArrowUpRightFromSquare
   } from "@fortawesome/free-solid-svg-icons";
-const Breadcrumb = ({linkUrl, descTitle}) => {
+
+interface BreadcrumbProps{
+  linkUrl: string;
+  descTitle: string;
+}
+
+const Breadcrumb = ({linkUrl, descTitle}: BreadcrumbProps) => {
   return (
     <Link href={linkUrl} className="breadcrumb">
         <FontAwesomeIcon className="breadcrumb-icon" icon={faAngleLeft} style={{marginRight : "6px"}} /> <p>{descTitle}</p> 

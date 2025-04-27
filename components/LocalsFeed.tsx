@@ -8,14 +8,14 @@ import LocalCard from './LocalCard';
 // }
 
 
-const LocalsFeed = ({data}) => {
+const LocalsFeed = ({data}: any) => {
   console.log(data);
   //const locals = data.locals;
   return (
     <div>
       <h4 className='feed-title'>Locales cercanos</h4>
       <div className="feed-container">
-      {data.map((local, index) => {
+      {data.map((local: any, index: number) => {
         return (
           <LocalCard 
             key={local.id}

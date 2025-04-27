@@ -13,13 +13,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
   } from "@fortawesome/free-brands-svg-icons";
 
 
+interface IconSocialProps {
+  type: string,
+  link: string
+}
 
 
 
-
-const IconSocial = ({type, link}) => {
+const IconSocial = ({type, link}: IconSocialProps) => {
   const [iconType, setIcon] = useState(faInstagram)
-    const how = (type) => {
+    const how = (type: string) => {
         if(type == "facebookUrl"){
             setIcon(faFacebookF)
         } else if(type == "instagramUrl"){

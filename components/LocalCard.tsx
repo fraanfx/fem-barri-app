@@ -3,7 +3,16 @@
 import "@/styles/globals.css";
 import { usePathname, useRouter } from "next/navigation";
 
-const LocalCard = ( { id, name, type, desc, web, tags}) => {
+interface LocalCardProps {
+    id: string,
+    name: string,
+    type: string,
+    desc: string;
+    web: string;
+    tags: [string];
+}
+
+const LocalCard = ( { id, name, type, desc, web, tags}: LocalCardProps) => {
     const pathName = usePathname();
     const router = useRouter();
     const navigatePage = () => {

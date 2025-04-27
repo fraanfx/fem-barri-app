@@ -1,9 +1,5 @@
-"use client";
-
-import { useEffect, useState} from "react";
-import { searchParams, useSearchParams } from 'next/navigation';
-import { useParams } from 'next/navigation';
-
+"use client"
+import { useParams, useSearchParams } from 'next/navigation';
 import Link from "next/link";
 import OfferCard from '@/components/OfferCard';
 import OffersFeed from "@/components/OffersFeed";
@@ -18,20 +14,68 @@ import {
     faArrowUpRightFromSquare
   } from "@fortawesome/free-solid-svg-icons";
 
-const LocalPage = ({ params }) => {
+
+
+
+  interface GeoPosition {
+    
+    lat: number;
+    lng: number;
+    
+  }
+  
+  interface SocialLinks {
+    [key: string]: string;
+  }
+  
+  interface Local {
+    id: string;
+    name: string;
+    type: string;
+    shortResume: string;
+    tags: string[];
+    description: string;
+    address: string;
+    geoPosition: GeoPosition;
+    urlLocation: string;
+    workTime: string[];
+    web?: string;
+    social?: SocialLinks;
+    imageLocation?: string;
+  }
+  
+  interface Offer {
+    id: string;
+    local: string;
+    // Add other offer properties as needed
+  }
+  
+  interface LocalPageProps {
+    params: {
+      id: string;
+    };
+  }
+
+
+
+
+
+  const LocalPage: React.FC<LocalPageProps> = ({ params }) => {
     const queryParams = useParams();
     const searchParams = useSearchParams();
-    const href = window.location.href;
+    //  const href = window.location.href;
     const local = data.locals.filter((local) => local.id == queryParams.id)[0];
     const localOffers = data.offers.filter((offer) => offer.local.toLowerCase().includes(local.name.toLowerCase()) )
-
+    
+    console.log(local)
 
     return(
         <div>
          {/* //Breadcrumb */}
          
             <Link href="/" className="breadcrumb">
-            <FontAwesomeIcon className="breadcrumb-icon" icon={faAngleLeft} style={{marginRight : "6px"}} /> <p>Volver al inicio</p> 
+            <FontAwesomeIcon className="breadcrumb-icon" icon={faAngleLeft} style={{marginRight : "6px"}} /> 
+            <p>Volver al inicio</p> 
             </Link>
          {/* //title */}
             <p className="citated-type">{local.type}</p>

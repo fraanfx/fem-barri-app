@@ -18,7 +18,7 @@ const LocalsPage = () => {
     const  allOffers  = data.offers;
     const [searchTerm, setSearchTerm] = useState("")
     const [offersData, setOffersData] = useState(allOffers)
-    const handleChange = (e) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>):void => {
         setSearchTerm(e.target.value)
     }
     
