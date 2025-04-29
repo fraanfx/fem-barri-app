@@ -14,7 +14,7 @@ const LocalsPage = () => {
     const  allLocals  = data.locals;
     const [searchTerm, setSearchTerm] = useState("")
     const [localsData, setLocalsData] = useState(allLocals)
-    const handleChange = (e) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>):void => {
         setSearchTerm(e.target.value)
     }
 

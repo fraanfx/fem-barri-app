@@ -1,5 +1,5 @@
 "use client"
-import { useParams, useSearchParams } from 'next/navigation';
+import { useParams, useSearchParams, notFound } from 'next/navigation';
 import Link from "next/link";
 import OfferCard from '@/components/OfferCard';
 import OffersFeed from "@/components/OffersFeed";
@@ -13,16 +13,12 @@ import {
     faAngleLeft,
     faArrowUpRightFromSquare
   } from "@fortawesome/free-solid-svg-icons";
+import { fetchLocal } from '@/utils/fetchHooks';
 
 
 
 
-  interface GeoPosition {
-    
-    lat: number;
-    lng: number;
-    
-  }
+ 
   
   interface SocialLinks {
     [key: string]: string;
@@ -56,18 +52,34 @@ import {
     };
   }
 
+  async function getLocal(id: string) {
+    const res = await fetch(`url${id}`, {
+        cache: 'force-cache',
+    })
+    const local: Local = await res.json()
+        if (!local) notFound()
+        return local
+  }
+
+  //export async function generateStaticParams()
 
 
 
-
-  const LocalPage: React.FC<LocalPageProps> = ({ params }) => {
+  const LocalPage: React.FC<LocalPageProps> = () => {
     const queryParams = useParams();
     const searchParams = useSearchParams();
     //  const href = window.location.href;
-    const local = data.locals.filter((local) => local.id == queryParams.id)[0];
+    const local = fetchLocal(queryParams.id);
+
+    //const local = data.locals.find((local) => local.id === queryParams.id);
     const localOffers = data.offers.filter((offer) => offer.local.toLowerCase().includes(local.name.toLowerCase()) )
     
-    console.log(local)
+    console.log('tg',typeof(local.geoPosition),local.geoPosition)
+
+    if (!local) {
+        return <p>Local no encontrado.</p>
+      }
+
 
     return(
         <div>
@@ -145,7 +157,7 @@ import {
         
          {/* //offersFeed */}
          <hr className="mb-50 op-0"/>
-         { localOffers[0] !== undefined ?  <OffersFeed title={`Ofertas de ${local.name}`} data={localOffers}/> : <p style={{"color": "red", "marginBottom" : "20px"}}>No hay ofertas disponibles para este local</p>}
+         { localOffers[0] !== undefined ?  <OffersFeed title={`Ofertas de ${local.name}`} data={localOffers}/> : <p style={{"color": "red", "marginBottom" : "20px", "textAlign":"center"}}>No hay ofertas disponibles para este local</p>}
                 
         {/* Social links*/}
         {

@@ -11,7 +11,7 @@ interface SocialProps {
   }
 }
 
-const Social = (links: SocialProps ) => {
+const Social = ({links}: SocialProps ) => {
     
    
     console.log("[socialInner]",links)

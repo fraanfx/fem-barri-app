@@ -1,4 +1,4 @@
-export type Offer = {
+export interface Offer {
     id: string,
     name: string,
     imageUrl: string,
@@ -19,7 +19,7 @@ export type Offer = {
     }
 }
 
-export type Local = {
+export interface Local {
     id: string,
     name: string,
     type: string,

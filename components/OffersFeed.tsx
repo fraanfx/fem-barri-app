@@ -1,13 +1,12 @@
 import React from 'react'
 //import {data} from "@/data/data"
 import OfferCard from './OfferCard';
-import {Offer} from '@/types/offer'
+import {Offer} from '@/types'
 
 interface OffersFeedProps {
   title: string,
-  data: [
-    Offer
-  ]
+  data: 
+    Offer[]
 }
 
 

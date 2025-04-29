@@ -18,9 +18,12 @@ type PointerProps = {
   lat: number,
   lng: number
 }
-type geoPositionProps = {
-  lat: number,
-  lng: number
+interface geoPositionProps  {
+  geoPosition:
+    { 
+      lat: number,
+      lng: number
+    }
 }
 const containerStyle = {
   height: '50vh', width: '100%' 
@@ -35,22 +38,16 @@ const  Pointer: React.FC<PointerProps> = (pointerProps) =>(
 ) 
 
 
-const Map = (geoPosition: geoPositionProps) => {
+const Map = ({geoPosition}: geoPositionProps) => {
 
-  const coords = {
-    lat: -3.745,
-    lng: -38.523,
-  }
 
   
-  
+      console.log("[coordenadas1]", geoPosition.lat, geoPosition.lng)
 
-    console.log("[coordenadas1]", geoPosition.lat, geoPosition.lng)
-    console.log("[coordenadas2]", coords.lat, coords.lng)
     const defaultProps = {
         center: {
-            lat: coords.lat,
-            lng : coords.lng
+            lat: geoPosition.lat,
+            lng : geoPosition.lng
         },
         zoom: 17
       };
@@ -62,9 +59,9 @@ const Map = (geoPosition: geoPositionProps) => {
         bootstrapURLKeys={{ key: "" }}
         defaultCenter={defaultProps.center}
         defaultZoom={defaultProps.zoom}
-        
+        draggable={false}
       > 
-      <Pointer lat={coords.lat} lng={coords.lng}/>
+      <Pointer  lat={geoPosition.lat} lng={geoPosition.lng}/>
       </GoogleMapReact> 
     </div>
   )

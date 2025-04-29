@@ -9,13 +9,17 @@ import Breadcrumb from "@/components/Breadcrumb";
 import {
     faMagnifyingGlass
   } from "@fortawesome/free-solid-svg-icons";
+import { fetchOffers } from "@/utils/fetchHooks";
+
+
+const serverOffers =  fetchOffers();
 
 
 
-
-
-const LocalsPage = () => {
+const OffersPage = () => {
+    console.log(serverOffers.then)
     const  allOffers  = data.offers;
+    console.log(allOffers)
     const [searchTerm, setSearchTerm] = useState("")
     const [offersData, setOffersData] = useState(allOffers)
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>):void => {
@@ -42,4 +46,4 @@ const LocalsPage = () => {
   )
 }
 
-export default LocalsPage;
+export default OffersPage;

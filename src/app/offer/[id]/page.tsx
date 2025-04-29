@@ -6,6 +6,7 @@ import Link from "next/link";
 import OfferCard from '@/components/OfferCard';
 import OffersFeed from "@/components/OffersFeed";
 import PrintSpecs from "@/components/PrintSpecs";
+import { Metadata } from "next";
 
 
 import {data} from "@/data/data"
@@ -19,9 +20,9 @@ import {
 
 
 
-const OfferPage = ({ params }) => {
+const OfferPage = () => {
    //const searchParams = useSearchParams();
-    const { offerId } = params;
+   // const { offerId } = params;
     const queryParams = useParams();
     //const href = window.location.href;
     const paramsOffer = data.offers.filter((offer) => offer.id == queryParams.id)[0];

@@ -1,6 +1,7 @@
 
 //import {data} from "@/data/data"
 import LocalCard from './LocalCard';
+import { Local } from '@/types';
 
 // const fetchLocals = () => {
 //   return fetch('')
@@ -8,7 +9,13 @@ import LocalCard from './LocalCard';
 // }
 
 
-const LocalsFeed = ({data}: any) => {
+interface LocalsFeedProps {
+  title: string,
+  data: 
+    Local[]
+}
+
+const LocalsFeed = ({data}: LocalsFeedProps) => {
   console.log(data);
   //const locals = data.locals;
   return (
