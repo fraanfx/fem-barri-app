@@ -12,9 +12,7 @@ interface SocialProps {
 }
 
 const Social = ({links}: SocialProps ) => {
-    
-   
-    console.log("[socialInner]",links)
+
   return (
    <div className="social-container">
         
@@ -28,11 +26,6 @@ const Social = ({links}: SocialProps ) => {
                      )
                     )
                      }
-                  
-                  
-                  
-                   
-
     </div>
   )
 }

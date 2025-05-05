@@ -11,7 +11,6 @@ const Newsletter = () => {
      const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
         const { value } = e.target;    
         setEmail(value);
-        console.log(email)
         emailRegex(email)
     };
 

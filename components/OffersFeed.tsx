@@ -16,6 +16,7 @@ const OffersFeed = ({ title, data}: OffersFeedProps ) => {
     <div>
       <h4 className='feed-title'>{title}</h4>
       <div className="feed-container">
+      
       {offers.map((offer: Offer) => {
         return (
           <OfferCard 
@@ -32,6 +33,7 @@ const OffersFeed = ({ title, data}: OffersFeedProps ) => {
           />
           )
         })}
+        {offers.length == 0 && (<><p>No hay resultados</p></>)}
         </div> 
     
     </div>

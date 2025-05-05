@@ -11,7 +11,6 @@ import {
 
 
 const InfoOffer = () => {
-   // const href = window.location.href;
   const [copied, setCopied] = useState('');
   const [isCopied, setIsCopied] = useState('false')
   const handleCopy = () => {
@@ -39,14 +38,6 @@ const InfoOffer = () => {
       />
         {isCopied === "true" ? "Enlace copiado" : 'Copia el enlace'}
        </span>
-  {/* <Image 
-    src={copied === post.prompt 
-      ? './assets/icons/tick.svg'
-      : './assets/icons/copy.svg'
-    }
-    width={20}
-    height={20}
-  /> */}
   </div>
   )
 }

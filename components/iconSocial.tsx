@@ -47,7 +47,6 @@ const IconSocial = ({type, link}: IconSocialProps) => {
   return (
     <div className="icon-container">
             <a target="_blank" href={link} rel="noopener noreferrer">
-            {/* <FontAwesomeIcon icon={faYouTube} style={{marginRight : "6px"}} /> */}
             <FontAwesomeIcon icon={iconType} />
          
         </a>

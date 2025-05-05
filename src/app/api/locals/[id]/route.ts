@@ -5,7 +5,8 @@ export async function GET(
   request: Request,
   { params }: { params: { id: string } }
 ) {
-  const local = data.locals.find(local => local.id === params.id);
+  const { id } = await params;
+  const local = data.locals.find(local => local.id === id);
   
   if (!local) {
     return NextResponse.json({ error: 'Local not found' }, { status: 404 });

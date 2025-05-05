@@ -25,7 +25,7 @@ export interface Local {
     type: string,
     address: string,
     imageLocation: string,
-    geoposition: {
+    geoPosition: {
         lat: number,
         lng: number,
     }
@@ -38,3 +38,8 @@ export interface Local {
     workTime: [string],
     social? : object
 }
+
+interface SocialLinks {
+    [key: string]: string;
+  }
+  

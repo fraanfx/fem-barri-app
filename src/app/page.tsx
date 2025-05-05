@@ -2,24 +2,18 @@ import OffersFeed from "@/components/OffersFeed";
 import LocalsFeed from "@/components/LocalsFeed";
 
 import { fetchOffers, fetchLocals } from "@/utils/fetchHooks";
-import {data} from "@/data/data"
 
 import Newsletter from "@/components/Newsletter";
-import Link from "next/link";
 import ViewMore from "@/components/ViewMore";
 
-
+  // Parallel data fetching for better performance
 const [offers, locals] = await Promise.all([
   fetchOffers(),
   fetchLocals(),
 ]);
 
 export default async function Home() {
-  console.log('This log should only appear on the server');
-  // Parallel data fetching for better performance
-  
-
-
+ 
   return (
     <section className=''>
    

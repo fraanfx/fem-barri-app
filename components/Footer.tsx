@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Footer = () => {
-    let date: Date = new Date();
+    const date: Date = new Date();
   return (
     <footer className='footer-container'>
         <a href="">Contacta con nosotros</a>

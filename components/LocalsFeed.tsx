@@ -16,7 +16,7 @@ interface LocalsFeedProps {
 }
 
 const LocalsFeed = ({data}: LocalsFeedProps) => {
-  console.log(data);
+  // console.log(data);
   //const locals = data.locals;
   return (
     <div>
@@ -35,6 +35,7 @@ const LocalsFeed = ({data}: LocalsFeedProps) => {
           />
         )
       })}
+      {data.length == 0 && (<><p>No hay resultados</p></>)}
       </div>
     </div>
   )

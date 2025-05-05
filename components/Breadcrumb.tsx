@@ -1,10 +1,8 @@
 import Link from "next/link"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-// import the icons you need
 import {
     faAngleLeft,
-    faArrowUpRightFromSquare
   } from "@fortawesome/free-solid-svg-icons";
 
 interface BreadcrumbProps{
@@ -15,7 +13,7 @@ interface BreadcrumbProps{
 const Breadcrumb = ({linkUrl, descTitle}: BreadcrumbProps) => {
   return (
     <Link href={linkUrl} className="breadcrumb">
-        <FontAwesomeIcon className="breadcrumb-icon" icon={faAngleLeft} style={{marginRight : "6px"}} /> <p>{descTitle}</p> 
+        <FontAwesomeIcon className="breadcrumb-icon" icon={faAngleLeft} /> <p>{descTitle}</p> 
     </Link>
   )
 }

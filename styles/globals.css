@@ -82,6 +82,7 @@ a, a:link, a:visited, a:hover, a:active{
   }
   .head_text{
     font-weight: 300;
+    cursor: pointer;
 
   }
   .subtitle{
@@ -167,6 +168,7 @@ a, a:link, a:visited, a:hover, a:active{
     right: 5px;
     top: 2px;
     margin-top: 12px;
+    max-height: 30px;
   }
   .search-container > .search > .icon-search{
     font-size: 1.6rem;
@@ -295,11 +297,11 @@ a, a:link, a:visited, a:hover, a:active{
 }
 /* local page */
 .citated-type{
-
+ font-size: inherit;
 }
 
 .local-location__container{
-
+  box-sizing: border-box;
 }
 
 
@@ -513,6 +515,12 @@ a, a:link, a:visited, a:hover, a:active{
     justify-content: center;
     margin: 20px auto;
   }
+  .copy-text-container > .svg-inline--fa{
+    max-height: 20px;
+  }
+ .fa-copy{
+    max-height: 24px;
+  } 
   .copy-container > p{
     margin: 20px 0 25px 0;
   }
@@ -560,6 +568,10 @@ a, a:link, a:visited, a:hover, a:active{
     flex-flow: row nowrap;
     margin: 20px 0;
   }
+  .breadcrumb-icon{
+    margin-right: 6px;
+    max-height: 27px;
+  } 
  
   .breadcrumb > p {
     margin: 0;
@@ -728,6 +740,7 @@ a, a:link, a:visited, a:hover, a:active{
       gap: 60px;
     }
     .container-h-flex > div{
+      max-height: 50%;
       
     }
     .page-low-info{
