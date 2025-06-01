@@ -13,11 +13,11 @@ export default async function LocalPage({ params } : {params:{id: string}}) {
 
     // Asegurarse de que offers sea un array
     const offers = Array.isArray(fetchedOffers) ? fetchedOffers : [fetchedOffers];
-  const offersO = Object.assign({}, offers); 
+  //const offersO = Object.assign({}, offers); 
     // Verificar los tipos antes de pasarlos
     console.log('Local type:', typeof(local), 'Is array?', Array.isArray(local));
     console.log('Offers type:', typeof(offers), 'Is array?', Array.isArray(offers));
-
+    
  // const serverOffers = await fetchLocal(params.id);
   
   //console.log(serverOffers)

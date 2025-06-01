@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import Image from 'next/image';
-import { usePathname, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 interface OfferCardProps {
     id: string,
@@ -21,9 +21,8 @@ interface OfferCardProps {
 
 
 const OfferCard = ({
-   id,  name, image, description, local, price, discount, cupon, date
+   id,  name, image, description, price, discount, date
 }: OfferCardProps) => {
-    const pathName = usePathname();
     const router = useRouter();
 
     const handleOfferClick = () => {
@@ -35,7 +34,7 @@ const OfferCard = ({
     <div className='offer-container' onClick={handleOfferClick}>
         <div className="offer-content">
             <div className="offer-row">
-                <img className='offer-image' width={80} height={80} src={image} alt={name} />
+                <Image className='offer-image' width={80} height={80} src={image} alt={name} />
                 <div className="offer-text">
                     <h3 className='offer--title'>{name}</h3>
                     <p className=''>{description}</p>

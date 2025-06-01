@@ -1,5 +1,4 @@
 import {useState} from 'react'
-import Image from 'next/image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
@@ -11,14 +10,10 @@ import {
 
 
 const InfoOffer = () => {
-  const [copied, setCopied] = useState('');
   const [isCopied, setIsCopied] = useState('false')
   const handleCopy = () => {
-      setCopied(window.location.href);
       navigator.clipboard.writeText(window.location.href);
       setIsCopied("true");
-    console.log('copied');
-      setTimeout(() => setCopied(""), 3000);
       setTimeout(() => setIsCopied("false"), 3000);
   }
 

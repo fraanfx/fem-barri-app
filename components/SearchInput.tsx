@@ -19,7 +19,7 @@ export interface SearchInputHandles {
 
 
   const SearchInput = forwardRef<SearchInputHandles, SearchInputProps>(
-  ({ placeholder, onSearchChange, ...props }, ref) => {
+  ({ placeholder, onSearchChange }, ref) => {
     const inputRef = useRef<HTMLInputElement>(null);
 
     useImperativeHandle(ref, () => ({

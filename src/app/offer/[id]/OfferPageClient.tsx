@@ -41,8 +41,8 @@ const OfferPageClient = ({offer, offers, local
                                     </div>
                                         <h3 className="offer--title">{offer.name}</h3>
                                     <div className="offer-description">
-                                        {offer.name}
-                                        <p className="mb-10">Last price: <span className='price red'>{offer.price}€</span></p>
+                                        {/* {offer.name} */}
+                                        <p className="mt-10 mb-10">Last price: <span className='price red'>{offer.price}€</span></p>
                                         
                                         <p className="mb-10">Offer price: <span className='price discount'>{offer.discountPrice}€</span></p>
                                         <p className="mb-10">{offer.resumeInfo}</p>
@@ -55,7 +55,7 @@ const OfferPageClient = ({offer, offers, local
                         </div>
             <div className="offer-specs" >
             <div className="" style={{display: "flex", flexFlow: "column nowrap"}}>
-                <h3 className="mb-10">Descripción de la oferta</h3>
+                <h3 className="mb-10">Detalles de la oferta</h3>
                 <p>{offer.description}</p>
             </div>
                 {

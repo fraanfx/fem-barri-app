@@ -1,6 +1,5 @@
 import {  fetchOffer, fetchOfferLocal, fetchOffers } from "@/utils/fetchHooks";
 import OfferPageClient from "./OfferPageClient";
-import { Local } from "@/types";
 
    // This is a Server Component that fetches the data
 export default async function OfferPage({ params } : {params:{id: string}}) {

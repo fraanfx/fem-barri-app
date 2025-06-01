@@ -1,5 +1,5 @@
 "use client"
-import { FontAwesomeIcon, FontAwesomeIconProps } from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import GoogleMapReact from 'google-map-react';
 
 
@@ -7,12 +7,12 @@ import {
   faLocationPin,
 } from "@fortawesome/free-solid-svg-icons";
 
-interface faProps {
-  icon: FontAwesomeIconProps,
-  lat: number,
-  long: number
-  className?: string
-}
+// interface faProps {
+//   icon: FontAwesomeIconProps,
+//   lat: number,
+//   long: number
+//   className?: string
+// }
 
 type PointerProps = {
   lat: number,
@@ -25,12 +25,12 @@ interface geoPositionProps  {
       lng: number
     }
 }
-const containerStyle = {
-  height: '50vh', width: '100%' 
-}
+// const containerStyle = {
+//   height: '50vh', width: '100%' 
+// }
 
  
-const  Pointer: React.FC<PointerProps> = (pointerProps) =>( 
+const  Pointer: React.FC<PointerProps> = () =>( 
       <FontAwesomeIcon
         icon={faLocationPin}
         style={{ fontSize: 26, color: "#ff4e33", marginRight: "9px" }}

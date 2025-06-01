@@ -22,7 +22,7 @@ const LocalsFeed = ({data}: LocalsFeedProps) => {
     <div>
       <h4 className='feed-title'>Locales cercanos</h4>
       <div className="feed-container">
-      {data.map((local: any, index: number) => {
+      {data.map((local: Local) => {
         return (
           <LocalCard 
             key={local.id}

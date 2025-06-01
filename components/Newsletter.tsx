@@ -15,7 +15,7 @@ const Newsletter = () => {
     };
 
     const emailRegex = (email: string): boolean => {
-        let mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        const mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
         return email.match(mailFormat) !== null;
     }
 

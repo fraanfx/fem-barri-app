@@ -1,7 +1,7 @@
 'use client'
 
 import "@/styles/globals.css";
-import { usePathname, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 interface LocalCardProps {
     id: string,
@@ -12,8 +12,7 @@ interface LocalCardProps {
     tags: [string];
 }
 
-const LocalCard = ( { id, name, type, desc, web, tags}: LocalCardProps) => {
-    const pathName = usePathname();
+const LocalCard = ( { id, name, type, desc, tags}: LocalCardProps) => {
     const router = useRouter();
     const navigatePage = () => {
         console.log('click')
