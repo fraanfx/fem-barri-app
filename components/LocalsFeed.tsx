@@ -16,7 +16,6 @@ interface LocalsFeedProps {
 }
 
 const LocalsFeed = ({data}: LocalsFeedProps) => {
-  // console.log(data);
   //const locals = data.locals;
   return (
     <div>

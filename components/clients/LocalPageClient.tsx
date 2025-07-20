@@ -16,7 +16,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 
   interface LocalPageClientProps {
     local: Local;
-    offers: Offer[] | [];
+    offers: Offer[];
   }
 
 
@@ -24,12 +24,10 @@ import Breadcrumb from '@/components/Breadcrumb';
 
   const LocalPageClient = ({local, offers}: LocalPageClientProps) => { 
 
-    console.log(local)
 
     if (!local) {
         return <p>Local no encontrado.</p>
       }
-      const localOffers = offers
     // const localOffers = offers.filter((offer: Offer) => offer.local.toLowerCase().includes(local.name.toLowerCase()) )
     
       return(
@@ -101,7 +99,7 @@ import Breadcrumb from '@/components/Breadcrumb';
         
          {/* //offersFeed */}
          <hr className="mb-50 op-0"/>
-         { localOffers[0] !== undefined ?  <OffersFeed title={`Ofertas de ${local.name}`} data={offers}/> : <p style={{"color": "red", "marginBottom" : "20px", "textAlign":"center"}}>No hay ofertas disponibles para este local</p>}
+         { offers !== undefined ?  <OffersFeed title={`Ofertas de ${local.name}`} data={offers}/> : <p style={{"color": "red", "marginBottom" : "20px", "textAlign":"center"}}>No hay ofertas disponibles para este local</p>}
                 
         {/* Social links*/}
         {

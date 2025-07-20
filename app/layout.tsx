@@ -22,6 +22,7 @@ const montserratFont = Montserrat({
 export const metadata: Metadata = {
   title: "FemBarri",
   description: "Descubre nuevos sitios en bcn",
+  // description: "I built and deployed a full-stack Next.js 15 app with App Router and TypeScript. The /locals page uses Server Components, SSR, and internal API Routes. Data is fetched on the server using safe relative paths to avoid build-time issues on Vercel.",
 };
 
 export default function RootLayout({

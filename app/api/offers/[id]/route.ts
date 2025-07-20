@@ -1,9 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
-import data from '../../mocks/data.json';
+import data from '@/mocks/data.json';
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }>}
 ) {
     const { id } = await params;
   const offer =  data.offers.find(offer => offer.id === id);

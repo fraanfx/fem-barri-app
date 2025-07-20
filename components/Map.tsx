@@ -40,10 +40,6 @@ const  Pointer: React.FC<PointerProps> = () =>(
 
 const Map = ({geoPosition}: geoPositionProps) => {
 
-
-  
-      console.log("[coordenadas1]", geoPosition.lat, geoPosition.lng)
-
     const defaultProps = {
         center: {
             lat: geoPosition.lat,

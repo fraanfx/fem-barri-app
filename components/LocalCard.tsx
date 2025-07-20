@@ -15,7 +15,6 @@ interface LocalCardProps {
 const LocalCard = ( { id, name, type, desc, tags}: LocalCardProps) => {
     const router = useRouter();
     const navigatePage = () => {
-        console.log('click')
         router.push(`/local/${id}`)
     }
 

@@ -41,7 +41,6 @@ export async function fetchOffers(): Promise<Offer[]> {
 
   export async function fetchLocal(id: string): Promise<Local> {
     const res = await fetch(`${API_URL}/locals/${id}`, { cache: 'no-store' });
-    
     if (!res.ok) {
       throw new Error('Failed to fetch local');
     }
@@ -49,23 +48,23 @@ export async function fetchOffers(): Promise<Offer[]> {
     return res.json();
   }
 
-  export async function fetchLocalOffers(id: string): Promise<Local> {
+  export async function fetchLocalOffers(id: string): Promise<Offer[]> {
     const res = await fetch(`${API_URL}/locals/${id}/local-offers`, { cache: 'no-store' });
-    
     if (!res.ok) {
       throw new Error('Failed to fetch local offers');
     }
-    
-    return res.json();
+    const dataObject = await res.json();
+    return dataObject;
   }
-
+  
   export async function fetchOfferLocal(id: string): Promise<Local> {
     const res = await fetch(`${API_URL}/offers/${id}/offer-local`, { cache: 'no-store' });
     
     if (!res.ok) {
       throw new Error('Failed to fetch offers from local');
     }
-    
-    return res.json();
+    const dataObject = await res.json();
+    const extratedObject = dataObject[0];
+    return extratedObject;
   }
   

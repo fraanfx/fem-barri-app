@@ -18,9 +18,8 @@ interface OfferPageClientProps {
 
 const OfferPageClient = ({offer, offers, local
 }: OfferPageClientProps) => { 
-    console.log('loc', local)
-    const localObj:Local = {...local[0]};
-    console.log('lo',localObj)
+
+    const localObj:Local =  local;
 
     if (!offer) {
         return <p>Oferta no encontrada.</p>

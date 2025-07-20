@@ -1,5 +1,5 @@
 import { fetchLocals } from "@/utils/fetchHooks";
-import LocalsPageClient from "./LocalsPageClient";
+import LocalsPageClient from "@/components/clients/LocalsPageClient";
 
 
 export default async function LocalPage() {

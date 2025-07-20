@@ -1,6 +1,6 @@
 import React from 'react'
 //import {data} from "@/data/data"
-import OfferCard from './OfferCard';
+import OfferCard from '@/components/OfferCard';
 import {Offer} from '@/types'
 
 interface OffersFeedProps {

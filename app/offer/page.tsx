@@ -1,5 +1,5 @@
 import { fetchOffers } from "@/utils/fetchHooks";
-import OffersPageClient from "./OffersPageClient";
+import OffersPageClient from "@/components/clients/OffersPageClient";
 
 
 // This is a Server Component that fetches the data

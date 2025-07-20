@@ -26,7 +26,6 @@ const OfferCard = ({
     const router = useRouter();
 
     const handleOfferClick = () => {
-        console.log(name);
         router.push(`/offer/${id}`);
       };
   return (
@@ -34,7 +33,7 @@ const OfferCard = ({
     <div className='offer-container' onClick={handleOfferClick}>
         <div className="offer-content">
             <div className="offer-row">
-                <Image className='offer-image' width={80} height={80} src={image} alt={name} />
+                <Image priority={false} className='offer-image' width={80} height={80} src={image} alt={name} />
                 <div className="offer-text">
                     <h3 className='offer--title'>{name}</h3>
                     <p className=''>{description}</p>

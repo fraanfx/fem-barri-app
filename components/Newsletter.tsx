@@ -21,7 +21,6 @@ const Newsletter = () => {
 
     const handleSubmit = (e: FormEvent) => {
         e.preventDefault();
-        console.log('send')
       
         const clean = () => { setTimeout(() => setErrorText(""), 9000);}
 
