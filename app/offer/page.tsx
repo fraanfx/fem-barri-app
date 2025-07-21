@@ -1,4 +1,5 @@
-import { fetchOffers } from "@/utils/fetchHooks";
+import { fetchOffers } from "@/lib/api/offers";
+// import { fetchOffers } from "@/utils/fetchHooks";
 import OffersPageClient from "@/components/clients/OffersPageClient";
 
 

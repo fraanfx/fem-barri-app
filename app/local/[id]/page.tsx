@@ -1,4 +1,5 @@
-import { fetchLocal, fetchLocalOffers } from "@/utils/fetchHooks";
+import { fetchLocal, fetchLocalOffers } from "@/lib/api";
+//import { fetchLocal, fetchLocalOffers } from "@/utils/fetchHooks";
 import LocalPageClient from "@/components/clients/LocalPageClient";
 import { notFound } from "next/navigation";
 

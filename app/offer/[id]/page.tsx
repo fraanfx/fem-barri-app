@@ -1,4 +1,5 @@
-import {  fetchOffer, fetchOfferLocal, fetchOffers } from "@/utils/fetchHooks";
+// import {  fetchOffer, fetchOfferLocal, fetchOffers } from "@/utils/fetchHooks";
+import {  fetchOffer, fetchOfferLocal, fetchOffers } from "@/lib/api/offers";
 import OfferPageClient from "@/components/clients/OfferPageClient";
 import { notFound } from "next/navigation";
 

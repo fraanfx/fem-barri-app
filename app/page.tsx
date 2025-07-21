@@ -1,7 +1,8 @@
 import OffersFeed from "@/components/OffersFeed";
 import LocalsFeed from "@/components/LocalsFeed";
 
-import { fetchOffers, fetchLocals } from "@/utils/fetchHooks";
+//import { fetchOffers, fetchLocals } from "@/utils/fetchHooks";
+import { fetchLocals, fetchOffers } from '@/lib/api';
 
 import Newsletter from "@/components/Newsletter";
 import ViewMore from "@/components/ViewMore";
