@@ -1,6 +1,6 @@
 {
-  "name": "fem-barri",
-  "version": "0.1.0",
+  "name": "fem-barri-app",
+  "version": "2.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -9,17 +9,24 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^6.4.0",
-    "@fortawesome/free-brands-svg-icons": "^6.4.2",
-    "@fortawesome/free-solid-svg-icons": "^6.4.0",
-    "@fortawesome/react-fontawesome": "^0.2.0",
-    "@next/font": "^13.4.9",
-    "dotenv": "^16.3.1",
-    "eslint": "8.41.0",
-    "eslint-config-next": "13.4.4",
-    "google-map-react": "^2.2.1",
-    "next": "13.4.4",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "google-map-react": "https://github.com/MikeBeasterfeld/google-map-react/tree/peer-dependencies-react-19",
+    "next": "^15.3.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@fortawesome/fontawesome-svg-core": "^6.7.2",
+    "@fortawesome/free-brands-svg-icons": "^6.7.2",
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
+    "@types/google-map-react": "^2.1.10",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "dotenv": "^16.5.0",
+    "eslint": "^9",
+    "eslint-config-next": "15.3.1",
+    "typescript": "^5"
   }
 }
