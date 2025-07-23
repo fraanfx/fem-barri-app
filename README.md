@@ -1,36 +1,93 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌆 Fem Barri – Local Business Support Web App
 
-## Getting Started
+**Fem Barri** is a **mobile-first web app** built with **Next.js** (App Router, TypeScript) designed to promote and support small local businesses in my neighborhood.
 
-First, run the development server:
+This project was designed in **Figma** and developed with a focus on performance, accessibility, and modern SSR patterns.
+
+---
+
+## ✨ Features
+
+- ✅ Server-Side Rendering (SSR) with mocked or real API routes
+- ✅ Designed for mobile-first experience
+- ✅ Built with the latest **Next.js 15 App Router**
+- ✅ Typed with **TypeScript**
+- ✅ Structured with modular components and clean API structure
+- ✅ Hosted and deployed on **Vercel**
+
+---
+
+## 🚀 Deployment
+
+This project is deployed on **Vercel** using two separate branches for clarity:
+
+| Branch        | Description                                                             |
+|---------------|-------------------------------------------------------------------------|
+| `main`        | Uses **mocked data** from a local `data.json` file via API routes       |
+| `migration`   | Uses full **SSR with `/api` routes**, intended for real deployment flow |
+
+> ✅ Both branches support **SSR**, but `main` uses file-based mocks to simplify testing and previewing without a backend.
+
+---
+
+## 🛠️ Tech Stack
+
+- [Next.js 15](https://nextjs.org/) – App Router + SSR
+- [TypeScript](https://www.typescriptlang.org/)
+- [Figma](https://figma.com/) – UI Design
+- [Vercel](https://vercel.com/) – Deployment
+- CSS Modules or Tailwind (depending on your styling setup)
+
+---
+
+## 📁 Project Structure (Simplified)
+
+````
+├── app/ # App Router pages & layout
+│ └── locals/ # Dynamic routes for local business pages
+├── components/ # UI components and client components
+├── lib/
+│ └── api/ # Data fetching (SSR-safe, modular)
+├── mocks/
+│ └── data.json # Mocked dataset used in main branch
+├── public/
+├── styles/
+└── README.md
+`````
+
+---
+
+## 🔄 Switching Between SSR Modes
+
+Depending on which branch you're working on:
+
+- In `main`:
+  - Data is served via `GET` handlers under `/api/`, backed by `mocks/data.json`.
+  - This allows full SSR without a real database.
+- In `migration`:
+  - Real API endpoints or future database integration can replace mock logic.
+  - Keeps SSR working exactly the same, just pulling real data.
+
+---
+
+## 🧪 Running Locally
 
 ```bash
+# Install dependencies
+npm install
+
+# Run in development
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+````
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🧪 Running Locally
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+- Integrate a real CMS or database (e.g., Sanity, Supabase)
 
-To learn more about Next.js, take a look at the following resources:
+- Integrate a QR system to share links to locals or stores inside the stores
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Add internationalization (i18n)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Improve SEO and structured data for business listings
