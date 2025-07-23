@@ -33,7 +33,7 @@ export interface SearchInputHandles {
 
   return (
      <div className="search-container">
-                <div className="search">
+                <div aria-roledescription='search' className="search">
                     <FontAwesomeIcon icon={faMagnifyingGlass}  className="icon-search "/>
                     <input className="text-input" type="text" ref={inputRef}  onChange={handleChange} placeholder={placeholder} ></input>
                 </div>

@@ -1,6 +1,7 @@
 'use client'
 
 import "@/styles/globals.css";
+import { useKeyboardClick } from "@/utils/pressKeyHooks";
 import { useRouter } from "next/navigation";
 
 interface LocalCardProps {
@@ -18,9 +19,12 @@ const LocalCard = ( { id, name, type, desc, tags}: LocalCardProps) => {
         router.push(`/local/${id}`)
     }
 
+    const onKeyDown = useKeyboardClick({ onEnterOrSpace: navigatePage });
+    
+
     return (
   
-        <div key={id} className={`local-card ${type}`}onClick={navigatePage}>
+        <div key={id} aria-description={`Card for ${name}`} aria-roledescription="Local card" className={`local-card ${type}`} tabIndex={0} onClick={navigatePage}  onKeyDown={onKeyDown}>
             <div className="card-title">
                 <h3>{type} {name}</h3>
             </div>

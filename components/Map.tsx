@@ -50,7 +50,7 @@ const Map = ({geoPosition}: geoPositionProps) => {
     
   return (
     // Important! Always set the container height explicitly
-    <div style={{ height: '50vh', width: '100%' }}>
+    <div aria-disabled aria-description='Embedded map' style={{ height: '50vh', width: '100%' }}>
        <GoogleMapReact
         bootstrapURLKeys={{ key: "" }}
         defaultCenter={defaultProps.center}

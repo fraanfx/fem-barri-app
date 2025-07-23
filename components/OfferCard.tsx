@@ -2,6 +2,7 @@
 import React from 'react'
 import Image from 'next/image';
 import { useRouter } from "next/navigation";
+import { useKeyboardClick } from '@/utils/pressKeyHooks';
 
 interface OfferCardProps {
     id: string,
@@ -20,6 +21,8 @@ interface OfferCardProps {
 }
 
 
+
+
 const OfferCard = ({
    id,  name, image, description, price, discount, date
 }: OfferCardProps) => {
@@ -28,9 +31,12 @@ const OfferCard = ({
     const handleOfferClick = () => {
         router.push(`/offer/${id}`);
       };
+    
+      const onKeyDown = useKeyboardClick({ onEnterOrSpace: handleOfferClick });
+
   return (
     
-    <div className='offer-container' onClick={handleOfferClick}>
+    <div className='offer-container' role='button' tabIndex={0} onClick={handleOfferClick} onKeyDown={onKeyDown} >
         <div className="offer-content">
             <div className="offer-row">
                 <Image priority={false} className='offer-image' width={80} height={80} src={image} alt={name} />

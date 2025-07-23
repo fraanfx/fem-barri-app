@@ -46,7 +46,7 @@ const Newsletter = () => {
 
 
   return (
-    <div className='newsletter-container'>
+    <div className='newsletter-container' aria-description='Subscribe for more'>
          <h4 className='feed-title'>Newsletter</h4>
          <p className='feed-description'>Suscribete a la newsletter para recibir las últimas ofertas</p>
          <form className='newsletter-form' ref={formRef}
@@ -55,11 +55,12 @@ const Newsletter = () => {
          <input placeholder='Escribe aquí tu correo' type='email' 
               name='email'
               onChange={handleChange}
+              tabIndex={0}
               className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
           />
               <h6 className={`error-text ${colorText}-color`} >{errorText}</h6>
 
-         <span  className='primary-button-visual newsletter' onClick={handleSubmit}>Suscríbete</span>
+         <span   tabIndex={0} role='button'               className='primary-button-visual newsletter' onClick={handleSubmit}>Suscríbete</span>
          </form>
     </div>
   )

@@ -46,7 +46,7 @@ const IconSocial = ({type, link}: IconSocialProps) => {
     
   return (
     <div className="icon-container">
-            <a target="_blank" href={link} rel="noopener noreferrer">
+            <a target="_blank" aria-description={`Link to social`} href={link} rel="noopener noreferrer">
             <FontAwesomeIcon icon={iconType} />
          
         </a>

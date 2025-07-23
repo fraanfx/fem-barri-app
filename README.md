@@ -8,11 +8,13 @@ This project was designed in **Figma** and developed with a focus on performance
 
 ## ✨ Features
 
-- ✅ Server-Side Rendering (SSR) with mocked or real API routes
-- ✅ Designed for mobile-first experience
+- ✅ **Server-Side Rendering (SSR)** with mocked or real API routes using Next.js App routes.
+- ✅ **WAI-ARIA integration** for accessible navigation and UI components with keyboard interaction enabled
+- ✅ **Performance optimized** with static asset caching, lazy loading, and SSR
+- ✅ **Modular API structure** for easy data fetching and reuse
+- ✅ **Mobile-first design** and responsive layout
 - ✅ Built with the latest **Next.js 15 App Router**
 - ✅ Typed with **TypeScript**
-- ✅ Structured with modular components and clean API structure
 - ✅ Hosted and deployed on **Vercel**
 
 ---
@@ -81,7 +83,7 @@ npm run dev
 
 ````
 
-## 🧪 Running Locally
+## 🧼 Future Improvements
 
 
 - Integrate a real CMS or database (e.g., Sanity, Supabase)

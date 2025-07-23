@@ -7,6 +7,7 @@ import {
   faCheck,
   faShareNodes
 } from "@fortawesome/free-solid-svg-icons";
+import { useKeyboardClick } from '@/utils/pressKeyHooks';
 
 
 const InfoOffer = () => {
@@ -17,6 +18,9 @@ const InfoOffer = () => {
       setTimeout(() => setIsCopied("false"), 3000);
   }
 
+    const onKeyDown = useKeyboardClick({ onEnterOrSpace: handleCopy });
+
+
   return (
     <div className='copy-container'>
       <div className="copy-text-container">
@@ -26,7 +30,12 @@ const InfoOffer = () => {
       /> <h2 className='mb-10'>Comparteme!</h2>
       </div>
       
-       <span className={`cta-copy ${isCopied} `} onClick={handleCopy} style={{"textAlign":"center"}}>
+       <span tabIndex={0} className={`cta-copy ${isCopied} `} aria-label="Copy to clipboard"
+       onClick={handleCopy}
+       onKeyDown={onKeyDown}
+
+       
+       style={{"textAlign":"center"}}>
        <FontAwesomeIcon
         icon={isCopied === "true" ? faCheck : faCopy }
         style={{ fontSize: 26, color: "#fff", marginRight: "9px" }}

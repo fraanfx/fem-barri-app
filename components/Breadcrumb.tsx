@@ -12,7 +12,7 @@ interface BreadcrumbProps{
 
 const Breadcrumb = ({linkUrl, descTitle}: BreadcrumbProps) => {
   return (
-    <Link href={linkUrl} className="breadcrumb">
+    <Link href={linkUrl} className="breadcrumb" aria-label={descTitle} aria-role="link">
         <FontAwesomeIcon className="breadcrumb-icon" icon={faAngleLeft} /> <p>{descTitle}</p> 
     </Link>
   )
