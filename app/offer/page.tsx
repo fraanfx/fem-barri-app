@@ -3,12 +3,9 @@ import { fetchOffers } from "@/lib/api/offers";
 import OffersPageClient from "@/components/clients/OffersPageClient";
 
 
-// This is a Server Component that fetches the data
 export default async function OffersPage() {
-  // Fetch data on the server
+
   const serverOffers = await fetchOffers();
-  
-  
-  // Pass the server-fetched data to the client component
+
  return <OffersPageClient initialOffers={serverOffers} />;
 }

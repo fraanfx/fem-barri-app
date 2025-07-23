@@ -1,4 +1,4 @@
-import { fetchLocals } from "@/lib/api";
+import { fetchLocals } from "@/lib/api/locals";
 // import { fetchLocals } from "@/utils/fetchHooks";
 import LocalsPageClient from "@/components/clients/LocalsPageClient";
 

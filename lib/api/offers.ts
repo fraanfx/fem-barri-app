@@ -1,22 +1,47 @@
+import { promises as fs } from 'fs';
+import path from 'path';
 import { Offer, Local } from '@/types';
-import { getBaseUrl } from './baseUrl';
 
 
 export async function fetchOffers(): Promise<Offer[]> {
-  const res = await fetch(`${getBaseUrl()}/api/offers`, { cache: 'no-store' });
-  if (!res.ok) throw new Error('Failed to fetch offers');
-  return res.json();
+  const filePath = path.join(process.cwd(), 'mocks', 'data.json');
+  const fileContent = await fs.readFile(filePath, 'utf-8');
+  const data = JSON.parse(fileContent);
+
+  return data.offers as Offer[];
 }
 
 export async function fetchOffer(id: string): Promise<Offer> {
-  const res = await fetch(`${getBaseUrl()}/api/offers/${id}`, { cache: 'no-store' });
-  if (!res.ok) throw new Error('Failed to fetch offer');
-  return res.json();
+  const filePath = path.join(process.cwd(), 'mocks', 'data.json');
+  const fileContent = await fs.readFile(filePath, 'utf-8');
+  const data = JSON.parse(fileContent);
+
+  const offer = data.offers.find((offer: Offer) => offer.id === id);
+
+  if (!offer) {
+    throw new Error(`Offer with ID ${id} not found`);
+  }
+
+  return offer;
 }
 
 export async function fetchOfferLocal(id: string): Promise<Local> {
-  const res = await fetch(`${getBaseUrl()}/api/offers/${id}/offer-local`, { cache: 'no-store' });
-  if (!res.ok) throw new Error('Failed to fetch offer local');
-  const data = await res.json();
-  return data[0];
+  const filePath = path.join(process.cwd(), 'mocks', 'data.json');
+  const fileContent = await fs.readFile(filePath, 'utf-8');
+  const data = JSON.parse(fileContent);
+
+  const offer = data.offers.find((offer: Offer) => offer.id === id);
+  if (!offer) {
+    throw new Error(`Offer with ID ${id} not found`);
+  }
+
+  const local = data.locals.find((local: Local) =>
+    offer.local.toLowerCase().includes(local.name.toLowerCase())
+  );
+  
+   if (!local) {
+    throw new Error(`Local for Offer ID ${id} not found`);
+  }
+
+  return local;
 }

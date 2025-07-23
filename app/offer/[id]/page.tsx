@@ -7,10 +7,7 @@ interface PageProps{
    params: Promise<{ id: string }>;
  }
  
-
-   // This is a Server Component that fetches the data
 export default async function OfferPage({ params } : PageProps) {
-    // Fetch data on the server
     const { id } = await params;
 
     try{
@@ -19,8 +16,8 @@ export default async function OfferPage({ params } : PageProps) {
          fetchOffers(),
          fetchOfferLocal(id)
       ]);
-      // Pass the server-fetched data to the client component
-         return <OfferPageClient offer={offer} offers={offers} local={local}/>;
+   
+      return <OfferPageClient offer={offer} offers={offers} local={local}/>;
     }
     catch(error)
     {

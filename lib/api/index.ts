@@ -1,2 +1,2 @@
-export * from './locals';
-export * from './offers';
+export * from '@/lib/api/locals';
+export * from '@/lib/api/offers';

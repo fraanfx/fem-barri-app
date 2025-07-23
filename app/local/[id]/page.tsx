@@ -4,13 +4,13 @@ import LocalPageClient from "@/components/clients/LocalPageClient";
 import { notFound } from "next/navigation";
 
 interface PageProps {
-  params: Promise<{ id: string }>;
+  params: { id: string };
 }
 
 // This is a Server Component that fetches the data
 export default async function LocalPage({ params } : PageProps) {
   // Fetch data on the server
-  const { id } = await params;
+  const { id } = await  params;
   try{
     const [local, fetchedOffers] = await Promise.all([
       fetchLocal(id),
